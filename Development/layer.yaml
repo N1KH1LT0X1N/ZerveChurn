@@ -1,0 +1,1560 @@
+id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+name: Development
+type: 1
+canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+blocks:
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Analyzes temporal coverage by identifying timestamp columns, date range,
+    and event distribution across months and weekdays
+  height: 1000
+  id: 031610c4-a350-451a-b591-29e9b3c91f80
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: date_range_and_temporal_coverage
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 21600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 043b0f20-2683-4420-a488-25f8dc2e2e5a
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Quality Assurance Checklist
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 0
+  y: 32000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 0e209692-d2a5-428a-a914-6a088252bd07
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: "Churn Early Warning \u2014 Ranked Action Table"
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 24000
+  y: 38000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Tracks advanced feature adoption (agent usage, collaboration, deployment)
+    per user with timing and champion scoring
+  height: 1000
+  id: 10098bbf-6c85-42a7-8077-569962b19901
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Feature Adoption Trajectories
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 12600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Loads parquet dataset and displays key metrics including dimensions,
+    memory usage, column types, and sample rows
+  height: 1000
+  id: 1aafa816-a7eb-437a-aaeb-40dd45c52569
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: load_and_inspect_dataset
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 21600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Identifies user sessions using 30-minute gap threshold and computes
+    session-level metrics including duration, event density, and deep work classification
+    for behavioral segmentation
+  height: 1000
+  id: 1bfb2fb3-0156-4a4c-ad15-c39847854235
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Session Pattern Analysis
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 11200
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Segments 5,410 users into workflow patterns (Notebook-Heavy, AI-Powered,
+    Mixed, etc.) by analyzing event distributions across workflow stages and calculating
+    behavior diversity using entropy metrics.
+  height: 1000
+  id: 210add96-5c4b-4336-b2eb-b785db260964
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Workflow Pattern Segmentation
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 8000
+  y: 8400
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: 'Creates 4 interactive visualizations mapping user events to workflow
+    stages and categories: workflow funnel showing stage progression, category distribution
+    of top events, category-to-stage relationships, and event frequency distribution.'
+  height: 1000
+  id: 2a61d9e1-217e-4ed7-b8b3-4e2d9e5c04d1
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Hierarchical Event Visualization
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 8000
+  y: 7000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 2c9d29bd-aba4-4741-b94b-1d78378b6d54
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Isolation Forest Anomaly Detection
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 10000
+  y: 11200
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Loads and profiles user retention dataset from parquet file with structure,
+    quality, and temporal analysis
+  height: 1000
+  id: 2cc6ed75-3706-40a9-b358-816f0ac5e147
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: 01_data_loading_and_overview
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 0
+  y: 21600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 35e752f4-be95-4b6e-aca4-942ef0e96ffc
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Churn Risk Scoring & Time-Based Predictions
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 18000
+  y: 15400
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 3aaed87c-d07f-433f-b062-a75e1e0bf4ff
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Weekly Insights Executive Briefing
+  parent_id: null
+  properties:
+    all_blocks_context_in_prompt: false
+    id: null
+    inputModalities: null
+    max_tokens: 4096
+    model: anthropic.claude-3-haiku-20240307-v1:0
+    modelId: null
+    modelName: null
+    modelType: null
+    model_input_image: null
+    outputModalities: null
+    output_variable: output
+    provider: bedrock
+    region: eu-west-1
+    system_prompt: null
+    temperature: 0.5
+  status: 1
+  type: 9
+  variables: null
+  width: 1600
+  x: 24000
+  y: 21000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 3b852862-73e5-4a3c-afcb-5514ca01fc84
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Executive Summary Report Generation
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 35000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 3e0b74e7-b609-452e-9d2f-b10344783f6c
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Survival Analysis Data Preparation
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 14000
+  y: 15400
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Builds comprehensive feature matrix across 7 categories (engagement,
+    workflow, temporal, collaboration, AI agent, derived, interaction) with 70+ engineered
+    features, then standardizes the dataset for ML modeling
+  height: 1000
+  id: 421e0ec3-3e47-4193-ab79-ed6e6f682b7c
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Comprehensive Feature Engineering
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 9800
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Analyzes dataset structure, schema, missing values, duplicates, timestamps,
+    and data quality metrics for 409K user retention events
+  height: 1000
+  id: 44911432-3421-4cfd-a3fe-eec5785456f7
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Data Exploration
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 0
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 45dd0f5b-7881-4425-a2c3-92bfe89fb499
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Save Report to File
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 26000
+  y: 21000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Generates detailed field-level summaries for three datasets (user_retention,
+    user_segments, user_intelligence_export) showing row/column counts, null percentages,
+    numeric statistics, categorical cardinality, and data types.
+  height: 1000
+  id: 46a3584c-1d4b-4abc-9b19-e80d2f37c236
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Dataset Field-Level Description
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 41000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Segments 5,410 users into engagement clusters using K-means analysis
+    of event frequency, session activity, and behavioral patterns. Assigns meaningful
+    labels (Power Users, Churned, etc.) to identify high-value, at-risk, and inactive
+    customers for targeted retention strategies.
+  height: 1000
+  id: 48382513-7982-4131-9f62-6427c0849a03
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Engagement Segmentation
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 8400
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: "Displays comprehensive user behavior analytics report with 409k events\
+    \ from 5.4k users\u2014covering engagement segmentation, workflow stages, feature\
+    \ adoption, retention signals, and monetization opportunities"
+  height: 1000
+  id: 4865d3d4-0721-4e1d-962e-234356cbf7c6
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Comprehensive Analysis Report
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 0
+  y: 15600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Splits user success data into stratified train/val/test sets (70/15/15),
+    scales features with StandardScaler, and applies SMOTE to balance training data
+  height: 1000
+  id: 4a843183-d0a0-4116-afa7-92bd638fb07c
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: 01_data_prep_train_val_test_split
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 10000
+  y: 14000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Segments users by adoption timing, activity patterns (weekday/weekend),
+    consistency, and monetization status (free vs credit users)
+  height: 1000
+  id: 4aafa92c-8dd0-47c4-83c6-dd384b79894e
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Temporal & Monetization Segmentation
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 9800
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Creates 5 interactive visualizations and exports a master segmentation
+    matrix for 5,410 users across engagement, workflow, and temporal dimensions. Validates
+    upstream data and produces scatter plots, bar charts, heatmaps, and a CSV export
+    with 16 behavioral attributes for analysis.
+  height: 1000
+  id: 4d3ec133-f925-4d1b-9fc9-d82ec84c2796
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Interactive Visualizations & Segment Export
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 10000
+  y: 9800
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Validates success metrics definitions against business objectives and
+    data availability. Analyzes class imbalance (99.6% failed users), assesses metric
+    applicability, and creates alternative success labels better suited to early-stage
+    product adoption patterns.
+  height: 1000
+  id: 4dc5810c-cb69-475a-9da8-5f8251821212
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Validation & Business Alignment
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 8000
+  y: 14000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: 'Calculates five key user success metrics from event data: long-term
+    retention (active 30+ days with 90+ day tenure), upgrade conversion (paid feature
+    usage), deployment success (at least 1 deployment), collaboration success (3+
+    sharing events), and power user emergence (top 25% engagement after 60+ days).'
+  height: 1000
+  id: 4fe8f20e-101f-4242-8ae8-57c6776b07bf
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Primary Success Metrics
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 12600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Calculates customer lifetime value (LTV) and unit economics by combining
+    engagement, churn risk, network value, and monetization signals into tiered LTV
+    scores (Platinum/Gold/Silver/Bronze). Generates distribution charts, LTV vs. churn
+    risk analysis, and segment breakdowns.
+  height: 1000
+  id: 5215a49f-9ac2-46be-8d5a-fd3bccd5f269
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: LTV Prediction & Unit Economics
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 22000
+  y: 19600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Calculates rolling 7-day and 30-day engagement metrics per user to
+    track momentum trends and identify churn risk based on acceleration/deceleration
+    patterns
+  height: 1000
+  id: 5360779a-2474-431c-9840-967f6d376251
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Engagement Momentum Tracking
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 12600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 56a67c43-cae6-4473-97eb-39dd68a51c32
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Engagement Forecast per Segment (Copy)
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 12100
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Calculates comprehensive statistical profiles and data quality metrics
+    for 107 columns across 409K rows, including distributions for numerical/categorical
+    features, missing value analysis, and completeness scoring
+  height: 1000
+  id: 588ecfb2-b84c-4afd-9426-62b4dcc449bd
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: 02_statistical_profiling
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 1400
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 5eacdfde-3131-4d47-bf0e-1016305278de
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Comprehensive User Analysis Findings
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 14000
+  y: 14000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 6a01f22c-85f9-4255-b5d1-f34ea93a3597
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Behavioral Economics Scoring
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 22000
+  y: 22400
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Analyzes how users adopt product features over time, identifying first-use
+    timing, adoption sequences, gateway features that drive engagement, and weekly
+    feature diversity trends
+  height: 1000
+  id: 6cabbeab-406c-4204-a78d-981e232ed16e
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Feature Adoption Evolution
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 8400
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 6e1621cd-8509-4fda-8e65-b8826ec82d29
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Weekly Delta Metrics Computation
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 22000
+  y: 21000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 6f1f3592-4dca-4abb-aa82-419183d36103
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: 02_base_models_ensemble
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 12000
+  y: 14000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Calculates weighted composite success scores (0-100) combining 5 business
+    metrics with retention, paid status, deployments, and engagement. Assigns users
+    to Failed/Moderate/Successful labels and visualizes distribution patterns across
+    5,410 users.
+  height: 1000
+  id: 6fddc4f7-2a14-46c9-a0dd-b078570085c7
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Composite Success Score & Labeling
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 14000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 79cecf00-ee28-469f-8cfe-962a11698d38
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Social Media Post Drafts
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 26000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Summarizes comprehensive dataset statistics including 409K events from
+    5,410 users with 141 event types, data quality metrics, temporal coverage (Sep-Dec
+    2025), and readiness for user segmentation and retention analysis
+  height: 1000
+  id: 7ba033e3-37bf-4f7b-867a-c0423547018b
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: key_findings_summary
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 6000
+  y: 23000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Classifies user engagement growth patterns by fitting cumulative event
+    curves to exponential, linear, plateau, and decline models; identifies inflection
+    points in weekly activity changes
+  height: 1000
+  id: 8372a34c-8d85-4888-8c46-de83ab4c1a04
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Growth Trajectory Classification
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 12600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Computes statistical summaries and cardinality analysis; visualizes
+    top 20 event type distribution
+  height: 1000
+  id: 858cac69-ac07-4cd4-8ac9-f9ec83d629bd
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Statistical Summaries
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 0
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 88d4c03d-7afc-4ed7-940a-f6f19a741088
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Integrated Dashboard Synthesis
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 20000
+  y: 16800
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 8986b069-906a-418c-a065-b011c844ec81
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Churn Early Warning System
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 38000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: "Classifies users through lifecycle stages (Onboarding \u22647 days,\
+    \ Exploration \u226430, Adoption \u226490, Maturity) and measures progression\
+    \ success rates with stage-specific engagement metrics"
+  height: 1000
+  id: 8a6e2af1-e11c-4c55-a9cd-8cbfb3e39be7
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Lifecycle Stage Definition
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 12600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: 8c234a81-e5f8-42d2-a375-ca9aeacaa123
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Collaboration Network & Centrality Analysis
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 10000
+  y: 12600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Classifies users as paid or free based on credit usage and tool activity,
+    detects duplicate/anomalous records, and visualizes user type distribution and
+    activity comparison
+  height: 1000
+  id: 95d4565f-3a70-4de1-b457-b4aceb941209
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: User Type & Anomaly Detection
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 4200
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: a1e3894b-861b-4e11-82fb-8ef56c515be1
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: GraphSAGE Training & Social Influence Embeddings
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 24000
+  y: 23800
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: a5bb52f8-2662-4338-b7c0-aff316db353a
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Community Detection & Success Correlation
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 22000
+  y: 15400
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Extracts 3-5 event sequence patterns (n-grams) per user and scores
+    power/struggle behaviors based on deployment, agent, and error indicators
+  height: 1000
+  id: a95f5629-99ff-406f-a1ad-b6e8fd18598b
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Workflow Sequence Patterns
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 11200
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Analyzes user event frequency distribution by calculating events per
+    user, computing activity statistics (mean, median, percentiles), categorizing
+    users into activity levels, and visualizing distributions with standard and log-scale
+    histograms
+  height: 1000
+  id: ad734095-08ab-4751-97fc-e496f2293c38
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: User Activity Analysis
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 1400
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Generates comprehensive 8-section user behavior analytics report with
+    409K events from 5.4K users, saved as timestamped markdown file covering dataset
+    profiling, event taxonomy, user segmentation, behavioral patterns, and actionable
+    business recommendations
+  height: 1000
+  id: ae21e716-3273-4390-b286-524e2bca8629
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Export Report as Markdown File
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 18600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: aea140e4-3679-4207-8a8c-23c38cc3752f
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Kaplan-Meier Survival Curves by Segment
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 16000
+  y: 15400
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Analyzes event timing patterns across hours, days, weeks, and months
+    with interactive visualizations
+  height: 1000
+  id: b0f6ada0-c9bd-4922-b459-41bf2f21f8f3
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Temporal Patterns
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 2800
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Assesses data quality by analyzing missing values, duplicates, identifier
+    uniqueness, and event type distribution
+  height: 1000
+  id: b16a055c-6555-480f-af64-170598abbf21
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: data_quality_checks
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 23000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: bb4bb303-89cf-4949-97a8-cb3c72eaa71c
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Engagement Forecast per Segment
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 12000
+  y: 12600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: bf4d7573-d8ef-4fcc-87f0-c656186c435c
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Project README
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 0
+  y: 29000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings:
+    compute_environment_type: 1
+  description: Loads user retention dataset from parquet file and displays preview
+  height: 1000
+  id: c4eb7a45-cf39-4219-8947-7c4605a7dd2c
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Example Dataset
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 0
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: c5297c1b-02f0-4f74-974c-ac96a9517153
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Hybrid GNN Churn Model & Community Analysis
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 26000
+  y: 23800
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: cac932c5-b77a-4c0f-bfe9-c70d3d8af7a8
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: GNN Social Influence Graph Construction
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 22000
+  y: 23800
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Initializes a Git repository and creates a comprehensive .gitignore
+    file configured for Python and data science projects, excluding common artifacts
+    like caches, virtual environments, credentials, notebooks, data files, models,
+    and logs.
+  height: 1000
+  id: cde7f66a-1dc3-40c4-b41f-30e05d89bde5
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Git Repository Setup
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 44000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Categorizes 141 user events into 22 logical groups (onboarding, blocks,
+    AI agents, queries, collaboration, etc.), generating taxonomy mappings and identifying
+    124 rare but important events (<1% frequency) for retention analysis.
+  height: 1000
+  id: d457c3be-22a5-4d3e-b7cd-e7d57c9171e7
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Event Taxonomy & Categorization
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 7000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: de48e1fc-fffb-41fc-80e8-7762dd52cd82
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: SHAP Explainability Analysis
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 22000
+  y: 18200
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: de6eadd5-8c94-47eb-810b-277f5fd27b06
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Causal Impact & Attribution Analysis
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 22000
+  y: 16800
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Combines session patterns, workflow sequences, and collaboration metrics
+    into unified behavioral fingerprint matrix for 5.4K users across 30+ features
+  height: 1000
+  id: e0470225-c3ee-4c58-b714-29c99281b1a6
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Collaboration Signature & Final Matrix
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 8000
+  y: 11200
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Maps user events to 14 workflow stages (Onboarding, Exploration, Creation,
+    etc.) to track typical user progression through the platform. Outputs stage statistics,
+    occurrence counts, and a 12-step user journey framework for behavior analysis.
+  height: 1000
+  id: e22b5687-debc-4295-a8ef-d9fb06551452
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Workflow Stage Mapping
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 7000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Synthesizes multiple user analyses (power users, network hubs, anomalies)
+    to identify overlaps, segment churn risk, generate actionable insights, and create
+    unified user profiles with prioritized retention strategies.
+  height: 1000
+  id: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Advanced Analysis Synthesis
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 20000
+  y: 15400
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Visualizes user data across geography, browser, OS, device types, daily
+    event trends, and event correlations
+  height: 1000
+  id: f9026078-b697-44d6-87c8-3ac49ff1d16e
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: Additional Exploratory Visualizations
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 5600
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: fe7a6c1f-9297-4863-ba1f-682b85f82e6c
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: User Intelligence Export
+  parent_id: null
+  properties:
+    interactive_execution: true
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 22000
+  y: 38000
+- auto_size: false
+  canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  compute_settings: null
+  description: Cross-analyzes power users, network hubs, and anomalous users to identify
+    overlaps, churn risk patterns, and behavioral profiles. Generates 5+ actionable
+    retention insights targeting elite users, isolated performers, and high-engagement
+    opportunities.
+  height: 1000
+  id: fe9a5757-2f4b-4c7d-b4a6-5386b27700d4
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  name: "Cohort Behavioral DNA \u2014 Feature Engineering"
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 22000
+  y: 25200
+edges:
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 00787a9c-0cda-4074-bd1c-1441fe20be43
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+  target: 6a01f22c-85f9-4255-b5d1-f34ea93a3597
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 0223fe0a-5d72-4213-adf0-133415f8f2e0
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 4d3ec133-f925-4d1b-9fc9-d82ec84c2796
+  target: 5215a49f-9ac2-46be-8d5a-fd3bccd5f269
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 07482072-06c3-48fc-9b34-53e59f4b4449
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: c4eb7a45-cf39-4219-8947-7c4605a7dd2c
+  target: 588ecfb2-b84c-4afd-9426-62b4dcc449bd
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 0761f73c-950d-467f-8d61-9b6c7f05dbcd
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: 95d4565f-3a70-4de1-b457-b4aceb941209
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 0a5dc110-2113-475f-82c4-577455991493
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 1aafa816-a7eb-437a-aaeb-40dd45c52569
+  target: 031610c4-a350-451a-b591-29e9b3c91f80
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 0df41667-a802-43da-a572-94c6bee3a6a9
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 5360779a-2474-431c-9840-967f6d376251
+  target: bb4bb303-89cf-4949-97a8-cb3c72eaa71c
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 0fc22dc8-bc9a-4d5d-b546-721e0799ad18
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 2c9d29bd-aba4-4741-b94b-1d78378b6d54
+  target: 88d4c03d-7afc-4ed7-940a-f6f19a741088
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 11015a96-d3e8-47cc-908f-fed4113598e7
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: 8a6e2af1-e11c-4c55-a9cd-8cbfb3e39be7
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 127418f1-4032-4fb2-a8a9-f18768d0a169
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 4aafa92c-8dd0-47c4-83c6-dd384b79894e
+  target: 421e0ec3-3e47-4193-ab79-ed6e6f682b7c
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 1eacc18c-5feb-4e08-ac82-fe7e2b647db4
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: c4eb7a45-cf39-4219-8947-7c4605a7dd2c
+  target: 44911432-3421-4cfd-a3fe-eec5785456f7
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 1f14bd42-8b46-449c-b998-91ff6f4d2fa4
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 8c234a81-e5f8-42d2-a375-ca9aeacaa123
+  target: a5bb52f8-2662-4338-b7c0-aff316db353a
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 20beb438-3678-411b-a2f1-4c0bae4810d6
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+  target: 6e1621cd-8509-4fda-8e65-b8826ec82d29
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 20f3ba45-2a7d-48d9-aa4d-2a54a77a04ef
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: f9026078-b697-44d6-87c8-3ac49ff1d16e
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 240402fc-d398-49c0-afc6-b811910bb73e
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: a1e3894b-861b-4e11-82fb-8ef56c515be1
+  target: c5297c1b-02f0-4f74-974c-ac96a9517153
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 26861e11-1b30-4a98-873f-a77b5568da86
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 2cc6ed75-3706-40a9-b358-816f0ac5e147
+  target: 1aafa816-a7eb-437a-aaeb-40dd45c52569
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 26d854c9-b68a-488a-a609-89e4c29b3ada
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: d457c3be-22a5-4d3e-b7cd-e7d57c9171e7
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 2d294a1d-c93b-46b7-ae51-cbb560a3ac28
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: 4fe8f20e-101f-4242-8ae8-57c6776b07bf
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 30fb60db-5104-4116-8acc-3a4b97dd9d3a
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 210add96-5c4b-4336-b2eb-b785db260964
+  target: 4d3ec133-f925-4d1b-9fc9-d82ec84c2796
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 317b0e1c-e43f-47bd-aae4-2713b7ed8b35
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: ad734095-08ab-4751-97fc-e496f2293c38
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 3b771c49-203b-49c2-a5fa-f0c79d9e1d0d
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 35e752f4-be95-4b6e-aca4-942ef0e96ffc
+  target: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 474e6531-5f58-4447-a69d-683bd09af623
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 2c9d29bd-aba4-4741-b94b-1d78378b6d54
+  target: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 493c31f3-ab73-46a9-b2ee-5cdb393a2813
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 4aafa92c-8dd0-47c4-83c6-dd384b79894e
+  target: 4d3ec133-f925-4d1b-9fc9-d82ec84c2796
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 51d5a4f8-ec45-494a-998c-28dad724827d
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: de48e1fc-fffb-41fc-80e8-7762dd52cd82
+  target: 0e209692-d2a5-428a-a914-6a088252bd07
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 5373ccd4-16e9-4a9c-a1f4-43c300aa5071
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 8986b069-906a-418c-a065-b011c844ec81
+  target: fe7a6c1f-9297-4863-ba1f-682b85f82e6c
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 57612953-bdcf-43ae-a277-1e6e42d97f8c
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: d457c3be-22a5-4d3e-b7cd-e7d57c9171e7
+  target: 6cabbeab-406c-4204-a78d-981e232ed16e
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 57e65ba3-c214-4473-b7fc-7d8c648b7185
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: 4aafa92c-8dd0-47c4-83c6-dd384b79894e
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 5e83981b-b2a4-41ca-ae33-7aa3d4a5cae4
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 6e1621cd-8509-4fda-8e65-b8826ec82d29
+  target: 3aaed87c-d07f-433f-b062-a75e1e0bf4ff
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 5f769ffa-74b4-445c-9b0b-9b2b9ad653f4
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e22b5687-debc-4295-a8ef-d9fb06551452
+  target: 2a61d9e1-217e-4ed7-b8b3-4e2d9e5c04d1
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 61b5c123-23a5-4bde-9ff8-8b38105b90fd
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 4d3ec133-f925-4d1b-9fc9-d82ec84c2796
+  target: fe7a6c1f-9297-4863-ba1f-682b85f82e6c
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 656f64ad-bd33-484e-8f68-537cf77a1b78
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 4d3ec133-f925-4d1b-9fc9-d82ec84c2796
+  target: fe9a5757-2f4b-4c7d-b4a6-5386b27700d4
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 67c98c57-275f-48d9-be19-4699fa74a96f
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: 48382513-7982-4131-9f62-6427c0849a03
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 6be45600-5226-4f46-818e-7c3effc81206
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 5360779a-2474-431c-9840-967f6d376251
+  target: 6a01f22c-85f9-4255-b5d1-f34ea93a3597
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 6d6766da-201e-410d-b4c5-af6c0b05756d
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 4a843183-d0a0-4116-afa7-92bd638fb07c
+  target: 6f1f3592-4dca-4abb-aa82-419183d36103
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 6df643e5-f95e-40c4-9ead-6c9fa36815a0
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 4fe8f20e-101f-4242-8ae8-57c6776b07bf
+  target: 6fddc4f7-2a14-46c9-a0dd-b078570085c7
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 6e70d6e3-0d91-4d47-9d8b-2452e2e4027a
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: 1bfb2fb3-0156-4a4c-ad15-c39847854235
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 79e2f61f-5da4-48af-9858-1f9ae5f44eb6
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e0470225-c3ee-4c58-b714-29c99281b1a6
+  target: 2c9d29bd-aba4-4741-b94b-1d78378b6d54
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 7e5e343b-9fe6-4df3-992f-56291288dbfa
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: 10098bbf-6c85-42a7-8077-569962b19901
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 7f2e657e-7b5d-45b3-8228-09aa04bc6299
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: d457c3be-22a5-4d3e-b7cd-e7d57c9171e7
+  target: 421e0ec3-3e47-4193-ab79-ed6e6f682b7c
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 81d30a29-2458-44cf-80ba-74c8408d8007
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+  target: a5bb52f8-2662-4338-b7c0-aff316db353a
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 88a93909-49e4-4a2a-8b5e-4c987feb7a41
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 8c234a81-e5f8-42d2-a375-ca9aeacaa123
+  target: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 8c750616-be56-4436-ab07-efd3183edd17
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e22b5687-debc-4295-a8ef-d9fb06551452
+  target: 210add96-5c4b-4336-b2eb-b785db260964
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 8e7d79c1-62d5-4577-badd-ebd9f668b7ac
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+  target: fe7a6c1f-9297-4863-ba1f-682b85f82e6c
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 93420db1-cded-4a4c-b5cc-2b16d93f02f1
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 48382513-7982-4131-9f62-6427c0849a03
+  target: 4d3ec133-f925-4d1b-9fc9-d82ec84c2796
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 95de08ee-b611-4491-9344-1a57ff799135
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 8a6e2af1-e11c-4c55-a9cd-8cbfb3e39be7
+  target: 8372a34c-8d85-4888-8c46-de83ab4c1a04
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 978ab2f0-c90e-4187-97ca-bf3c2ee93670
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 031610c4-a350-451a-b591-29e9b3c91f80
+  target: 7ba033e3-37bf-4f7b-867a-c0423547018b
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 9cf46458-8388-4f6d-a56d-b87cc82658e8
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 3aaed87c-d07f-433f-b062-a75e1e0bf4ff
+  target: 45dd0f5b-7881-4425-a2c3-92bfe89fb499
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: 9f51983b-8063-49ed-b346-d8a6863d5621
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 6f1f3592-4dca-4abb-aa82-419183d36103
+  target: 5eacdfde-3131-4d47-bf0e-1016305278de
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: a124b77c-b6b8-44fe-88c7-74cb24743ea8
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 48382513-7982-4131-9f62-6427c0849a03
+  target: 210add96-5c4b-4336-b2eb-b785db260964
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: a463a28c-3f8c-4ee2-b7f6-26f397495040
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 6fddc4f7-2a14-46c9-a0dd-b078570085c7
+  target: 4dc5810c-cb69-475a-9da8-5f8251821212
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: b5537900-5760-4deb-98c6-7fc611660858
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 4dc5810c-cb69-475a-9da8-5f8251821212
+  target: 4a843183-d0a0-4116-afa7-92bd638fb07c
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: bc46223e-5632-4bb7-8df6-1cba69d6b12e
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 3e0b74e7-b609-452e-9d2f-b10344783f6c
+  target: aea140e4-3679-4207-8a8c-23c38cc3752f
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: bcffa011-2c8e-4117-9a0e-abfb052c489f
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: 858cac69-ac07-4cd4-8ac9-f9ec83d629bd
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: beca85bb-952b-4082-939d-fd80d14aa50f
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+  target: de48e1fc-fffb-41fc-80e8-7762dd52cd82
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: bf7323cb-cee1-4a5a-9dc1-63f69e8a8758
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: cac932c5-b77a-4c0f-bfe9-c70d3d8af7a8
+  target: a1e3894b-861b-4e11-82fb-8ef56c515be1
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: c2358872-d69a-4193-92b7-bd3f2fa8d007
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 6f1f3592-4dca-4abb-aa82-419183d36103
+  target: de48e1fc-fffb-41fc-80e8-7762dd52cd82
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: c259f080-a6dd-4658-8fac-bf766871de7e
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 5360779a-2474-431c-9840-967f6d376251
+  target: de6eadd5-8c94-47eb-810b-277f5fd27b06
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: c3ecde2b-6a62-415e-bde1-e6722fe6b607
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 1aafa816-a7eb-437a-aaeb-40dd45c52569
+  target: b16a055c-6555-480f-af64-170598abbf21
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: c7ecaf81-35a8-4182-8b83-f29bab690c7c
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 5360779a-2474-431c-9840-967f6d376251
+  target: fe9a5757-2f4b-4c7d-b4a6-5386b27700d4
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: cc407d74-6f31-4f4b-9875-be53c271154a
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 35e752f4-be95-4b6e-aca4-942ef0e96ffc
+  target: 88d4c03d-7afc-4ed7-940a-f6f19a741088
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: ce149485-0b7b-418e-9fde-fa19e00454e2
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: b16a055c-6555-480f-af64-170598abbf21
+  target: 7ba033e3-37bf-4f7b-867a-c0423547018b
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: d249b3cd-645c-4716-8b9f-e1f4331e66d4
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: 5360779a-2474-431c-9840-967f6d376251
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: d4788cb2-f374-4cdb-9a3e-47df95f61432
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 1bfb2fb3-0156-4a4c-ad15-c39847854235
+  target: a95f5629-99ff-406f-a1ad-b6e8fd18598b
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: d51c3b37-8f29-4234-99cf-466c89d9b2e2
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+  target: 5215a49f-9ac2-46be-8d5a-fd3bccd5f269
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: d83c5d52-44b2-4569-8760-17eb9cc5630d
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 1bfb2fb3-0156-4a4c-ad15-c39847854235
+  target: e0470225-c3ee-4c58-b714-29c99281b1a6
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: d9071732-8ae5-4d00-a2be-13a023447c03
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 8c234a81-e5f8-42d2-a375-ca9aeacaa123
+  target: 88d4c03d-7afc-4ed7-940a-f6f19a741088
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: da3b054e-a325-4c2b-b29c-ac9b6acd7a7d
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+  target: cac932c5-b77a-4c0f-bfe9-c70d3d8af7a8
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: dc952bb4-ff42-4da2-ba0e-9eea9b7ca997
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 4d3ec133-f925-4d1b-9fc9-d82ec84c2796
+  target: bb4bb303-89cf-4949-97a8-cb3c72eaa71c
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: deb04aa0-6105-47a2-a6dc-0d7d9cfd7cb9
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 44911432-3421-4cfd-a3fe-eec5785456f7
+  target: b0f6ada0-c9bd-4922-b459-41bf2f21f8f3
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: e625e211-e8b9-45ab-b00e-77dbfe1fc5b2
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: aea140e4-3679-4207-8a8c-23c38cc3752f
+  target: 35e752f4-be95-4b6e-aca4-942ef0e96ffc
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: e69dda2e-f776-49a0-a0bb-f413c81eb1ce
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 8986b069-906a-418c-a065-b011c844ec81
+  target: 0e209692-d2a5-428a-a914-6a088252bd07
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: e807154f-4350-4814-878a-d00ee3cbf143
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 2c9d29bd-aba4-4741-b94b-1d78378b6d54
+  target: 5eacdfde-3131-4d47-bf0e-1016305278de
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: ede85b20-a0a4-4733-8228-98218d6c34bc
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: bb4bb303-89cf-4949-97a8-cb3c72eaa71c
+  target: 56a67c43-cae6-4473-97eb-39dd68a51c32
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: f027ca66-b1ec-43ed-93a1-9b0b2f006889
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: 6f1f3592-4dca-4abb-aa82-419183d36103
+  target: 3e0b74e7-b609-452e-9d2f-b10344783f6c
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: f069c75b-e8d2-4496-a364-145ffec1cf9f
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+  target: de6eadd5-8c94-47eb-810b-277f5fd27b06
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: f3bade12-a841-4267-9f5c-3bbd1f6c439a
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: a95f5629-99ff-406f-a1ad-b6e8fd18598b
+  target: e0470225-c3ee-4c58-b714-29c99281b1a6
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: f4652030-0bf7-45b7-ba2b-e34f6a558828
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: d457c3be-22a5-4d3e-b7cd-e7d57c9171e7
+  target: e22b5687-debc-4295-a8ef-d9fb06551452
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: fd1bd115-8ff9-4857-b87e-7c1496c0d763
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e0470225-c3ee-4c58-b714-29c99281b1a6
+  target: 8c234a81-e5f8-42d2-a375-ca9aeacaa123
+- canvas_id: 6399a86d-0177-4065-a572-329c60569c25
+  id: febd5e04-b3da-4cd9-aa56-1910cab4d1d0
+  layer_id: 9ed97209-6d58-487d-9b83-57a7de4361c5
+  source: e4e0c430-38b9-491b-bad3-95b04f4fff6a
+  target: fe9a5757-2f4b-4c7d-b4a6-5386b27700d4

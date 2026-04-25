@@ -1,0 +1,219 @@
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Export Report as Markdown File.py", line 531, in <module>
+    print(f"\u2705 Comprehensive Analysis Report Generated")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Dataset Field-Level Description.py", line 69, in <module>
+    print(f"  user_retention.parquet     \u2192 {retention_df.shape[0]:,} rows × {retention_df.shape[1]} cols")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 29: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Git Repository Setup.py", line 104, in <module>
+    f.write(gitignore_content.strip() + "\n")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 2-3: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Data Exploration.py", line 85, in <module>
+    print("**\u2713 Exploration complete!**")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\02_statistical_profiling.py", line 11, in <module>
+    print("\U0001f4ca STATISTICAL PROFILING & DATA QUALITY ASSESSMENT")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ca' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Statistical Summaries.py", line 36, in <module>
+    categorical_cols = user_retention.select_dtypes(include=['object', 'str']).columns.tolist()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: numpy string dtypes are not allowed, use 'str' or 'object' instead
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Additional Exploratory Visualizations.py", line 198, in <module>
+    print("\u2713 COMPREHENSIVE DATA PROFILING COMPLETE")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Event Taxonomy & Categorization.py", line 290, in <module>
+    print("\u2713 Event taxonomy created and stored in 'taxonomy_reference' dictionary")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Session Pattern Analysis.py", line 10, in <module>
+    df_sessions = user_retention.sort_values(['distinct_id', 'timestamp']).copy()
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 240. MiB for an array with shape (77, 409287) and data type object
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Engagement Momentum Tracking.py", line 148, in <module>
+    print("\n\u2713 Momentum tracking visualizations created.")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Feature Adoption Trajectories.py", line 23, in <module>
+    print(f"\n\u2713 Tracking {len(advanced_features)} advanced feature categories")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Lifecycle Stage Definition.py", line 105, in <module>
+    print(f"  - Onboarding \u2192 Exploration: {user_lifecycle_progression['reached_exploration'].sum() / len(user_lifecycle_progression) * 100:.1f}%")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 15: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Primary Success Metrics.py", line 22, in <module>
+    print(f"\n\U0001f4ca Analysis Period: {analysis_start_date.date()} to {current_date.date()}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ca' in position 2: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\data_quality_checks.py", line 26, in <module>
+    print(f"\n\u2713 Columns with Complete Data (No Missing): {complete_cols}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Workflow Stage Mapping.py", line 237, in <module>
+    print("\u2713 Workflow stage mapping completed and stored in 'workflow_mapping' dictionary")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Feature Adoption Evolution.py", line 96, in <module>
+    print(f"  {cnt:3d} users: {seq}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 22: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Comprehensive Feature Engineering.py", line 18, in <module>
+    print("\n\U0001f4ca CATEGORY 1: ENGAGEMENT FEATURES")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ca' in position 2: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Workflow Sequence Patterns.py", line 11, in <module>
+    df_seq = df_sessions[['distinct_id', 'session_id', 'event', 'timestamp']].copy()
+             ^^^^^^^^^^^
+NameError: name 'df_sessions' is not defined
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Composite Success Score & Labeling.py", line 19, in <module>
+    print("\n\U0001f4ca Metric Weights:")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ca' in position 2: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 330, in main
+    run_block(b, code_path, ns)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\scripts\run_canvas_locally.py", line 198, in run_block
+    exec(compiled, ns)
+    ~~~~^^^^^^^^^^^^^^
+  File "C:\Dev\ZerveChurn\Development\Hierarchical Event Visualization.py", line 207, in <module>
+    print("\n\u2713 Created 4 hierarchical visualizations:")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>

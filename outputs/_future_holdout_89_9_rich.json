@@ -1,0 +1,251 @@
+{
+  "feature_horizon_days": 89,
+  "dataset_start": "2025-09-01",
+  "split_date": "2025-11-29",
+  "dataset_end": "2025-12-08",
+  "n_users": 3905,
+  "target_positive_rate": 0.033034571062740076,
+  "best_model_by_val_auc": "voting",
+  "best_model_by_val_f1": "ada",
+  "best_model_by_test_auc": "voting",
+  "val_f1_per_model": {
+    "rf": 0.9328548620092127,
+    "gb": 0.944436130021354,
+    "ada": 0.9551212516527225,
+    "lr": 0.4625975299445097,
+    "voting": 0.9353699744951394,
+    "stacking": 0.9367536687373651
+  },
+  "val_auc_per_model": {
+    "rf": 0.7681095406360425,
+    "gb": 0.7725265017667845,
+    "ada": 0.832155477031802,
+    "lr": 0.8213780918727914,
+    "voting": 0.8369257950530036,
+    "stacking": 0.7163427561837455
+  },
+  "test_metrics": {
+    "accuracy": 0.931740614334471,
+    "precision": 0.9637035027621289,
+    "recall": 0.931740614334471,
+    "f1": 0.9448049247791427,
+    "roc_auc": 0.916829109811566,
+    "confusion_matrix": [
+      [
+        534,
+        33
+      ],
+      [
+        7,
+        12
+      ]
+    ],
+    "n_test": 586,
+    "test_positive_rate": 0.032423208191126277
+  },
+  "test_metrics_per_model": {
+    "rf": {
+      "accuracy": 0.9368600682593856,
+      "precision": 0.9643901289184617,
+      "recall": 0.9368600682593856,
+      "f1": 0.9481099343638834,
+      "roc_auc": 0.8806274946625824,
+      "confusion_matrix": [
+        [
+          537,
+          30
+        ],
+        [
+          7,
+          12
+        ]
+      ],
+      "n_test": 586,
+      "test_positive_rate": 0.032423208191126277
+    },
+    "gb": {
+      "accuracy": 0.9488054607508533,
+      "precision": 0.9623454567636005,
+      "recall": 0.9488054607508533,
+      "f1": 0.9546750378711834,
+      "roc_auc": 0.8163928339366936,
+      "confusion_matrix": [
+        [
+          546,
+          21
+        ],
+        [
+          9,
+          10
+        ]
+      ],
+      "n_test": 586,
+      "test_positive_rate": 0.032423208191126277
+    },
+    "ada": {
+      "accuracy": 0.9283276450511946,
+      "precision": 0.969491807194359,
+      "recall": 0.9283276450511946,
+      "f1": 0.9441426207467163,
+      "roc_auc": 0.9161793372319689,
+      "confusion_matrix": [
+        [
+          529,
+          38
+        ],
+        [
+          4,
+          15
+        ]
+      ],
+      "n_test": 586,
+      "test_positive_rate": 0.032423208191126277
+    },
+    "lr": {
+      "accuracy": 0.3191126279863481,
+      "precision": 0.9690505739993794,
+      "recall": 0.3191126279863481,
+      "f1": 0.445140228520552,
+      "roc_auc": 0.8860113246078158,
+      "confusion_matrix": [
+        [
+          168,
+          399
+        ],
+        [
+          0,
+          19
+        ]
+      ],
+      "n_test": 586,
+      "test_positive_rate": 0.032423208191126277
+    },
+    "voting": {
+      "accuracy": 0.931740614334471,
+      "precision": 0.9637035027621289,
+      "recall": 0.931740614334471,
+      "f1": 0.9448049247791427,
+      "roc_auc": 0.916829109811566,
+      "confusion_matrix": [
+        [
+          534,
+          33
+        ],
+        [
+          7,
+          12
+        ]
+      ],
+      "n_test": 586,
+      "test_positive_rate": 0.032423208191126277
+    },
+    "stacking": {
+      "accuracy": 0.9351535836177475,
+      "precision": 0.9620727392419681,
+      "recall": 0.9351535836177475,
+      "f1": 0.9464006269387221,
+      "roc_auc": 0.83829945233454,
+      "confusion_matrix": [
+        [
+          537,
+          30
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "n_test": 586,
+      "test_positive_rate": 0.032423208191126277
+    }
+  },
+  "comparison": {
+    "composite_label_baseline_roc_auc": 0.9952,
+    "composite_label_baseline_accuracy": 0.9951,
+    "base_holdout_roc_auc": 0.9414,
+    "base_holdout_accuracy": 0.9044,
+    "delta_roc_auc_vs_composite_baseline": -0.07837089018843402,
+    "delta_roc_auc_vs_base_holdout": -0.024570890188434058
+  },
+  "features_used": [
+    "total_events",
+    "tenure_days",
+    "days_since_first",
+    "days_since_last",
+    "total_sessions",
+    "avg_session_length_min",
+    "max_session_length_min",
+    "std_session_length_min",
+    "avg_events_per_session",
+    "avg_event_density",
+    "deep_work_sessions",
+    "deep_work_ratio",
+    "avg_inter_session_gap_hours",
+    "unique_event_types",
+    "power_events_count",
+    "has_deployment_sequence",
+    "has_agent_workflow",
+    "has_create_run_pattern",
+    "error_count",
+    "failed_block_runs",
+    "repeated_events_count",
+    "sequence_diversity",
+    "trigram_count",
+    "power_user_score",
+    "struggle_score",
+    "active_days",
+    "last7d_events",
+    "prior7d_events",
+    "momentum_change",
+    "accel_periods",
+    "decel_periods",
+    "max_daily_events",
+    "events_stdev"
+  ],
+  "feature_groups": {
+    "base": [
+      "total_events",
+      "tenure_days",
+      "days_since_first",
+      "days_since_last"
+    ],
+    "session": [
+      "total_sessions",
+      "avg_session_length_min",
+      "max_session_length_min",
+      "std_session_length_min",
+      "avg_events_per_session",
+      "avg_event_density",
+      "deep_work_sessions",
+      "deep_work_ratio",
+      "avg_inter_session_gap_hours"
+    ],
+    "workflow": [
+      "unique_event_types",
+      "power_events_count",
+      "has_deployment_sequence",
+      "has_agent_workflow",
+      "has_create_run_pattern",
+      "error_count",
+      "failed_block_runs",
+      "repeated_events_count",
+      "sequence_diversity",
+      "trigram_count",
+      "power_user_score",
+      "struggle_score"
+    ],
+    "momentum": [
+      "active_days",
+      "last7d_events",
+      "prior7d_events",
+      "momentum_change",
+      "accel_periods",
+      "decel_periods",
+      "max_daily_events",
+      "events_stdev"
+    ]
+  },
+  "top_feature_importances": [],
+  "label_definition": "user has >=1 event in the target window",
+  "notes": "All features computed strictly on feature-window events (days 1..feature_horizon_days); target derived from the disjoint future window. No label-time information leaks into features."
+}

@@ -1,0 +1,55 @@
+You are a sharp senior analyst writing a weekly executive briefing for the CEO and leadership team. Write a compelling, narrative-driven report that a non-technical executive can read in 3 minutes and act on immediately.
+
+Use this week's structured metrics data:
+
+```json
+{{ weekly_insights_metrics }}
+```
+
+Write the report using the following format and tone — punchy, direct, insight-driven. No fluff. Every sentence earns its place.
+
+---
+
+# 📊 Weekly User Intelligence Briefing
+**Week of {{ weekly_insights_metrics.week_range }}** | *vs prior week: {{ weekly_insights_metrics.prior_week_range }}*
+
+---
+
+## 🎯 Headline Findings
+Write 2–3 bold, one-sentence findings that capture the most important things that happened this week. These should be the things a CEO would bring up in a board meeting.
+
+---
+
+## 📈 What Changed This Week — and Why
+Analyze the week-over-week deltas across active users, events, retention, and churn risk. Explain *why* these changes likely happened, not just *what* changed. Identify leading indicators and lagging signals.
+
+---
+
+## 👥 Segment Spotlights
+For each active segment, describe their behavior this week. Who drove growth? Who is at risk? Highlight any unusual patterns. Include specific numbers.
+
+---
+
+## 🚀 Top Movers
+Highlight the users or groups that showed the most significant week-over-week activity changes. Note whether they are power users, network hubs, or new entrants. What does their trajectory tell us?
+
+---
+
+## ⚠️ Risk Flags
+Surface the most urgent retention and churn risks. Specifically call out:
+- Elite users at churn risk (power users / network hubs)
+- Momentum deceleration signals
+- Segments with low retention
+
+---
+
+## ✅ 3 Prioritized Recommended Actions
+Write 3 crisp, specific, actionable recommendations ordered by urgency and impact. Each action should name the target segment, the intervention, and the expected outcome.
+
+1. **[Action 1 title]** — [Who to target, what to do, expected outcome]
+2. **[Action 2 title]** — [Who to target, what to do, expected outcome]
+3. **[Action 3 title]** — [Who to target, what to do, expected outcome]
+
+---
+
+*Report generated automatically using ML-powered behavioral analytics. Model: {{ weekly_insights_metrics.model_performance.best_model }} | Accuracy: {{ weekly_insights_metrics.model_performance.test_accuracy }} | F1: {{ weekly_insights_metrics.model_performance.test_f1 }}*

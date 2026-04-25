@@ -1,0 +1,885 @@
+[  1/67] RUN   Example Dataset
+Dataset shape: (409287, 107)
+
+First few rows:
+      ok (2.92s, namespace=5 names)
+[  2/67] SKIP  Comprehensive Analysis Report  (type=4 (non-code))
+[  3/67] RUN   Export Report as Markdown File
+      FAIL (0.00s): UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+[  4/67] SKIP  01_data_loading_and_overview  (type=4 (non-code))
+[  5/67] RUN   Social Media Post Drafts
+Social Media Post Drafts Generated Successfully!
+Filename: social_media_posts_20260424.md
+Total Posts: 5
+
+Post Titles:
+   - Twitter/X Post 1 - Engagement Polarization
+   - Twitter/X Post 2 - Churn Prediction
+   - Twitter/X Post 3 - Deep Work Sessions
+   - LinkedIn Post 1 - Full Analysis Announcement
+   - LinkedIn Post 2 - Feature Engineering
+
+Download from file system: social_media_posts_20260424.md
+      ok (0.02s, namespace=16 names)
+[  6/67] SKIP  Project README  (type=4 (non-code))
+[  7/67] SKIP  Quality Assurance Checklist  (type=4 (non-code))
+[  8/67] RUN   Executive Summary Report Generation
+Executive Summary Report Generated Successfully!
+Filename: user_behavior_analytics_report_20260424.md
+Report Length: 5,282 characters (743 words)
+
+Report Sections:
+   1. Executive Summary
+   2. Methodology
+   3. 5 Key Findings with Statistics
+   4. 5 Prioritized Recommendations
+   5. Success Metrics & KPIs
+
+Download from file system: user_behavior_analytics_report_20260424.md
+      ok (0.01s, namespace=16 names)
+[  9/67] RUN   Churn Early Warning System
+======================================================================
+CHURN EARLY WARNING SYSTEM — Gradient Boosting Ensemble
+======================================================================
+
+[1] 409,287 events loaded | ref date: 2025-12-08
+[1] Feature engineering complete: 5,410 users, 14 churn signals
+
+[2] Churn rate: 41.2%  (2,230/5,410)
+
+[3] Model Performance (test set, 80/20 split):
+    GradientBoosting (XGB-equiv) AUC: 1.0000
+    HistGradBoost    (LGB-equiv) AUC: 1.0000
+    RandomForest                 AUC: 1.0000
+    Ensemble weighted 40/40/20   AUC: 1.0000  |  F1: 1.0000
+
+[4] Composite scores: 60% ensemble | 25% engagement decay | 15% recency
+
+[5] Risk tier distribution:
+    Critical  :   987  (18.2%)
+    High      : 1,243  (23.0%)
+    Medium    :     8  (0.1%)
+    Low       : 3,172  (58.6%)
+
+[8] churn_risk_scores: (5410, 12)
+    Downstream vars: churn_risk_scores | top_20_at_risk | top_100_intervention
+    Public exports for SHAP/explainability:
+      churn_ews_feature_names   (14 feats)
+      churn_ews_feature_matrix  (5410, 15)
+      churn_ews_rf_model        (RandomForest, 150 trees)
+      churn_ews_gb_model / churn_ews_hgb_model / churn_ews_ensemble_weights / churn_ews_feature_labels
+
+======================================================================
+CHURN EARLY WARNING SYSTEM — FINAL SUMMARY
+======================================================================
+Total users scored   : 5,410
+Ensemble ROC-AUC     : 1.0000  |  F1: 1.0000
+30-day churn rate    : 41.2%
+  Critical          : 987  (18.2%)
+  High              : 1,243  (23.0%)
+  Medium            : 8  (0.1%)
+  Low               : 3,172  (58.6%)
+
+Top 3 features: Recency score (inactivity), 30-day event drop rate, 7d vs expected ratio
+
+Top 10 at-risk users:
+ rank                                                          user_id  churn_risk_score risk_tier  engagement_decay  recency_days                                                           top_risk_factors
+    1 3b10fe92fe4b4262ed494f5e2a275267134432b438718b0a44955f583ddfc5e0              97.2  Critical          0.955787     68.376024 Recency score (inactivity) | 30-day event drop rate | 7d vs expected ratio
+    2 cc51e4fb18b1134e6bf9bb49684a3c27e1e32270305209d4798050f3a8aae0e0              95.9  Critical          0.943371     66.840864 Recency score (inactivity) | 30-day event drop rate | 7d vs expected ratio
+    3 ffeeabe06f75e52abfa93b6603da3929d00d904eea3d63e446bd4219699ac5ff              95.4  Critical          0.896461     66.336211 Recency score (inactivity) | 30-day event drop rate | 7d vs expected ratio
+    4 0034627cc8f0d07712f824d5796635623880ce54be3270576ef935fc445ef9f2              95.0  Critical          0.869305     67.566830 Recency score (inactivity) | 30-day event drop rate | 7d vs expected ratio
+    5 c1ec76a28828ebec13648dbfbd247cfc881d66b17619a47a3fcef9ee582c048a              94.5  Critical          0.778154     82.865072 Recency score (inactivity) | 30-day event drop rate | 7d vs expected ratio
+    6 131b3e9f5753e47360849ae9e7ebb4dcde0531279d9545d8481ce66582f9f722              94.4  Critical          0.914335     60.681868 Recency score (inactivity) | 30-day event drop rate | 7d vs expected ratio
+    7 dd15472a0171efff7e30205c0bdeac8729ad450e58d7d4678392135ded15b599              94.0  Critical          0.892762     61.544791 Recency score (inactivity) | 30-day event drop rate | 7d vs expected ratio
+    8 7b7dad2a81e56a76e05d170f4147ed848a20061bc084934ce81f754d70ad6073              93.7  Critical          0.825301     66.197648 Recency score (inactivity) | 30-day event drop rate | 7d vs expected ratio
+    9 7d547542c2d571d1ca06403e5bb665a9e582e5eb7aeecea0acd81db0d383783a              93.4  Critical          0.779904     69.845187 Recency score (inactivity) | 30-day event drop rate | 7d vs expected ratio
+   10 8c4ee0b9f79684eeebcedf6fa57a3ac495536a297e9e7d684e717aecb37a4b63              93.2  Critical          0.730434     89.408541 Recency score (inactivity) | 30-day event drop rate | 7d vs expected ratio
+======================================================================
+
+Output variables: churn_risk_scores | top_20_at_risk | top_100_intervention
+      ok (26.45s, namespace=52 names)
+[ 10/67] RUN   Dataset Field-Level Description
+Loading datasets...
+      FAIL (1.33s): UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 29: character maps to <undefined>
+[ 11/67] RUN   Git Repository Setup
+Working directory: C:\Dev\ZerveChurn
+Reinitialized existing Git repository in C:/Dev/ZerveChurn/.git/
+      FAIL (0.08s): UnicodeEncodeError: 'charmap' codec can't encode characters in position 2-3: character maps to <undefined>
+[ 12/67] RUN   Data Exploration
+# 1. Dataset Dimensions
+- **Rows**: 409,287
+- **Columns**: 107
+
+# 2. Schema Information
+
+Column details:
+- `Unnamed: 0`: int32
+- `distinct_id`: object
+- `person_id`: object
+- `created_at`: datetime64[us]
+- `uuid`: object
+- `event`: object
+- `timestamp`: datetime64[us]
+- `_inserted_at`: datetime64[us]
+- `prop_$pathname`: object
+- `prop_$config_defaults`: object
+- `prop_$session_entry_pathname`: object
+- `prop_$is_identified`: object
+- `prop_$browser_version`: float64
+- `prop_$web_vitals_enabled_server_side`: object
+- `prop_$session_id`: object
+- `prop_$dead_clicks_enabled_server_side`: object
+- `prop_$session_entry_host`: object
+- `prop_$timezone_offset`: float64
+- `prop_$lib`: object
+- `prop_$host`: object
+
+... and 87 more columns
+
+# 3. Sample Data (First 5 Rows)
+
+Showing key columns:
+
+**Row 1:**
+  - distinct_id: c6b7194076615a080564b652d1074060ebaed4f5b7d96802a309139f7dd47eb4
+  - person_id: 62f39b3a3278352348dfe2dbbf8e56dd099c880078b2aa728873a44404aea7c1
+  - event: agent_accept_suggestion
+  - timestamp: 2025-09-01 11:51:29
+  - created_at: 2025-09-01 11:51:32
+  - prop_$pathname: /canvas/1372463f-f0d3-4628-87f3-2eddb39371c3
+  - prop_$browser: Chrome
+  - prop_$os: Windows
+  - prop_$geoip_country_code: IN
+
+**Row 2:**
+  - distinct_id: 395cb81ce8c15979c62d3cec4f1ddf6194039bce9e6c444b7ef710d243e80bea
+  - person_id: 1247d31b3758f45fcd6d6e8affa0f458996119313f33f987d946e91df7f2b316
+  - event: agent_worker_created
+  - timestamp: 2025-09-01 16:58:48
+  - created_at: 2025-09-01 16:58:49
+  - prop_$pathname: null
+  - prop_$browser: null
+  - prop_$os: Linux
+  - prop_$geoip_country_code: null
+
+**Row 3:**
+  - distinct_id: 395cb81ce8c15979c62d3cec4f1ddf6194039bce9e6c444b7ef710d243e80bea
+  - person_id: 1247d31b3758f45fcd6d6e8affa0f458996119313f33f987d946e91df7f2b316
+  - event: block_resize
+  - timestamp: 2025-09-01 18:16:30
+  - created_at: 2025-09-01 18:16:31
+  - prop_$pathname: /canvas/2c1bf6d3-9127-41b4-a211-047b190c9d0e
+  - prop_$browser: Safari
+  - prop_$os: Mac OS X
+  - prop_$geoip_country_code: PH
+
+**Row 4:**
+  - distinct_id: 395cb81ce8c15979c62d3cec4f1ddf6194039bce9e6c444b7ef710d243e80bea
+  - person_id: 1247d31b3758f45fcd6d6e8affa0f458996119313f33f987d946e91df7f2b316
+  - event: canvas_onboarding_tour_code_and_variables_step
+  - timestamp: 2025-09-01 16:56:09
+  - created_at: 2025-09-01 16:56:10
+  - prop_$pathname: /canvas/2c1bf6d3-9127-41b4-a211-047b190c9d0e
+  - prop_$browser: Safari
+  - prop_$os: Mac OS X
+  - prop_$geoip_country_code: PH
+
+**Row 5:**
+  - distinct_id: 395cb81ce8c15979c62d3cec4f1ddf6194039bce9e6c444b7ef710d243e80bea
+  - person_id: 1247d31b3758f45fcd6d6e8affa0f458996119313f33f987d946e91df7f2b316
+  - event: canvas_onboarding_tour_finished
+  - timestamp: 2025-09-01 16:56:27
+  - created_at: 2025-09-01 16:56:29
+  - prop_$pathname: /canvas/2c1bf6d3-9127-41b4-a211-047b190c9d0e
+  - prop_$browser: Safari
+  - prop_$os: Mac OS X
+  - prop_$geoip_country_code: PH
+
+# 4. Missing Values Analysis
+
+**Total columns with missing values**: 96 out of 107
+
+**Top 10 columns with most missing values:**
+- `prop_credits_used`: 387,874 (94.8%)
+- `prop_user_id`: 386,484 (94.4%)
+- `prop_$session_recording_start_reason`: 363,247 (88.8%)
+- `prop_$initialization_time`: 362,414 (88.5%)
+- `prop_$dead_clicks_enabled_server_side`: 362,160 (88.5%)
+- `prop_$autocapture_disabled_server_side`: 361,449 (88.3%)
+- `prop_$web_vitals_enabled_server_side`: 361,449 (88.3%)
+- `prop_$exception_capture_enabled_server_side`: 361,449 (88.3%)
+- `prop_$configured_session_timeout_ms`: 361,346 (88.3%)
+- `prop_surface`: 361,346 (88.3%)
+
+# 5. Timestamp Analysis
+
+**Timestamp columns found**: 6
+
+`created_at:`
+  - Min: 2025-09-01 00:03:14.899000
+  - Max: 2025-12-08 23:59:57.810000
+  - Range: 98 days
+
+`timestamp:`
+  - Min: 2025-09-01 00:03:11.704000
+  - Max: 2025-12-08 23:59:57.379000
+  - Range: 98 days
+
+`_inserted_at:`
+  - Min: 2025-09-01 00:03:11.704000
+  - Max: 2025-12-08 23:59:57.379000
+  - Range: 98 days
+
+`prop_$initialization_time:`
+  - Min: 2025-08-19 08:41:55.663000
+  - Max: 2025-12-08 23:38:20.114000
+  - Range: 111 days
+
+`prop_$sent_at:`
+  - Min: 2025-09-01 00:03:14.406000
+  - Max: 2025-12-08 23:54:56.584000
+  - Range: 98 days
+
+# 6. Data Quality Checks
+
+- **Duplicate rows**: 0
+- **Completely empty rows**: 0
+- **Memory usage**: 1243.61 MB
+- **Unique events**: 141
+- **Unique users (distinct_id)**: 5,410
+- **Unique persons (person_id)**: 4,774
+
+# 7. Data Type Distribution
+
+**Column types:**
+- object: 77 columns
+- float64: 23 columns
+- datetime64[us]: 6 columns
+- int32: 1 columns
+
+---
+      FAIL (9.51s): UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+[ 13/67] RUN   02_statistical_profiling
+================================================================================
+      FAIL (1.82s): UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ca' in position 0: character maps to <undefined>
+[ 14/67] RUN   load_and_inspect_dataset
+================================================================================
+DATASET DIMENSIONS
+================================================================================
+Total Rows: 409,287
+Total Columns: 107
+
+================================================================================
+MEMORY USAGE
+================================================================================
+Total Memory Usage: 1243.61 MB
+Average Memory per Row: 3.11 KB
+
+================================================================================
+COLUMN TYPES SUMMARY
+================================================================================
+object                        :  77 columns
+float64                       :  23 columns
+datetime64[us]                :   6 columns
+int32                         :   1 columns
+
+================================================================================
+SAMPLE DATA (First 3 Rows)
+================================================================================
+   Unnamed: 0                                                       distinct_id                                                         person_id              created_at                                                              uuid                    event               timestamp            _inserted_at                                prop_$pathname prop_$config_defaults                  prop_$session_entry_pathname prop_$is_identified  prop_$browser_version prop_$web_vitals_enabled_server_side                      prop_$session_id prop_$dead_clicks_enabled_server_side prop_$session_entry_host  prop_$timezone_offset       prop_$lib    prop_$host prop_$timezone   prop_$insert_id    prop_$time prop_$session_entry_referring_domain  prop_$os prop_$console_log_recording_enabled_server_side prop_$session_recording_start_reason prop_$raw_user_agent  prop_$sdk_debug_replay_internal_buffer_length  prop_$sdk_debug_retry_queue_size  prop_$viewport_width                prop_$referrer  prop_$sdk_debug_current_session_duration  prop_$sdk_debug_replay_internal_buffer_size  prop_$screen_width prop_$sdk_debug_replay_event_trigger_status prop_$device_type  prop_$session_entry_referrer prop_$browser_language_prefix                     prop_$pageview_id prop_$recording_status  prop_$sdk_debug_session_start                                                 prop_$current_url                                                     prop_$user_id                                           prop_$session_entry_url prop_surface  prop_$viewport_height prop_$referring_domain prop_$autocapture_disabled_server_side prop_$sdk_debug_replay_url_trigger_status prop_$sdk_debug_replay_linked_flag_trigger_status                       prop_$window_id prop_$lib_version                           prop_userId prop_$browser_language prop_$os_version  prop_$configured_session_timeout_ms  prop_$screen_height prop_$initialization_time prop_$exception_capture_enabled_server_side prop_$browser           prop_$sent_at prop_$geoip_country_name prop_$geoip_country_code prop_$session_recording_network_payload_capture.capturePerformance.network_timing prop_$session_recording_network_payload_capture.capturePerformance.web_vitals                           prop_$set.$pathname  prop_$set.$browser_version prop_$set.$os prop_$set.$raw_user_agent  prop_$set.$viewport_width           prop_$set.$referrer  prop_$set.$screen_width prop_$set.$device_type                                            prop_$set.$current_url  prop_$set.$viewport_height prop_$set.$referring_domain prop_$set.$os_version  prop_$set.$screen_height prop_$set.$browser prop_$set.$geoip_country_name prop_$set.$geoip_country_code              prop_$set_once.$initial_pathname  prop_$set_once.$initial_browser_version prop_$set_once.$initial_os prop_$set_once.$initial_raw_user_agent  prop_$set_once.$initial_viewport_width prop_$set_once.$initial_referrer  prop_$set_once.$initial_screen_width prop_$set_once.$initial_device_type                               prop_$set_once.$initial_current_url  prop_$set_once.$initial_viewport_height prop_$set_once.$initial_referring_domain prop_$set_once.$initial_os_version  prop_$set_once.$initial_screen_height prop_$set_once.$initial_browser prop_$set_once.$initial_geoip_country_name prop_$set_once.$initial_geoip_country_code prop_$python_version                       prop_message_id prop_$python_runtime                       prop_session_id prop_tool_name prop_credit_amount prop_$last_posthog_reset prop_user_id prop_credits_used
+0           0  c6b7194076615a080564b652d1074060ebaed4f5b7d96802a309139f7dd47eb4  62f39b3a3278352348dfe2dbbf8e56dd099c880078b2aa728873a44404aea7c1 2025-09-01 11:51:32.723  272d6fca3bed273b25cf380ebf80a39b762d7cb76eeeaca7a9d503e782a60de6  agent_accept_suggestion 2025-09-01 11:51:29.310 2025-09-01 11:51:29.310  /canvas/1372463f-f0d3-4628-87f3-2eddb39371c3                 unset  /canvas/1372463f-f0d3-4628-87f3-2eddb39371c3                True                  139.0                                 None  0199051c-d94f-72d4-895a-d392481c982f                                  None             app.zerve.ai                 -330.0             web  app.zerve.ai  Asia/Calcutta  tf6k5usp82vrpxxz  1.756727e+09                  accounts.google.com   Windows                                            True                                 None    Chrome on Windows                                            0.0                               0.0                1536.0  https://accounts.google.com/                                       NaN                                          0.0              1536.0                            trigger_disabled           Desktop  https://accounts.google.com/                            en  0199051c-87e1-7e34-b968-8445acb57563                 active                   1.756727e+12  https://app.zerve.ai/canvas/1372463f-f0d3-4628-87f3-2eddb39371c3  c6b7194076615a080564b652d1074060ebaed4f5b7d96802a309139f7dd47eb4  https://app.zerve.ai/canvas/1372463f-f0d3-4628-87f3-2eddb39371c3         None                  776.0    accounts.google.com                                   None                          trigger_disabled                                  trigger_disabled  0199051c-d94f-72d4-895a-d393d157dbe9           1.255.1  bacad2d6-1181-4fab-bd3d-eba37599d818                  en-US               10                                  NaN                864.0                       NaT                                        None        Chrome 2025-09-01 11:51:32.344                    India                       IN                                                                              True                                                                          True  /canvas/1372463f-f0d3-4628-87f3-2eddb39371c3                       139.0       Windows         Chrome on Windows                     1536.0  https://accounts.google.com/                   1536.0                Desktop  https://app.zerve.ai/canvas/1372463f-f0d3-4628-87f3-2eddb39371c3                       776.0         accounts.google.com                    10                     864.0             Chrome                         India                            IN  /canvas/1372463f-f0d3-4628-87f3-2eddb39371c3                                    139.0                    Windows                      Chrome on Windows                                  1536.0     https://accounts.google.com/                                1536.0                             Desktop  https://app.zerve.ai/canvas/1372463f-f0d3-4628-87f3-2eddb39371c3                                    776.0                      accounts.google.com                                 10                                  864.0                          Chrome                                      India                                         IN                 None                                  None                 None                                  None           None               None  2025-09-01 11:50:00.782         None              None
+1           1  395cb81ce8c15979c62d3cec4f1ddf6194039bce9e6c444b7ef710d243e80bea  1247d31b3758f45fcd6d6e8affa0f458996119313f33f987d946e91df7f2b316 2025-09-01 16:58:49.648  36c1b70c2497696ac620b79e7876177996d1d46ebe7a9c56e064c4b6c0d4d6aa     agent_worker_created 2025-09-01 16:58:48.868 2025-09-01 16:58:48.868                                          None                  None                                          None                None                    NaN                                 None                                  None                                  None                     None                    NaN  posthog-python          None           None              None           NaN                                 None     Linux                                            None                                 None                 None                                            NaN                               NaN                   NaN                          None                                       NaN                                          NaN                 NaN                                        None              None                          None                          None                                  None                   None                            NaN                                                              None                                                              None                                                              None         None                    NaN                   None                                   None                                      None                                              None                                  None             5.4.0                                  None                   None               12                                  NaN                  NaN                       NaT                                        None          None                     NaT                     None                     None                                                                              None                                                                          None                                          None                         NaN         Linux                      None                        NaN                          None                      NaN                   None                                                              None                         NaN                        None                    12                       NaN               None                          None                          None                                          None                                      NaN                      Linux                                   None                                     NaN                             None                                   NaN                                None                                                              None                                      NaN                                     None                                 12                                    NaN                            None                                       None                                       None               3.12.9  ef55c05f-544a-45ef-b709-f33d5da971d6              CPython  93e61c07-41db-4f9b-bbbd-c98c6db406a3           None               None                      NaT         None              None
+2           2  395cb81ce8c15979c62d3cec4f1ddf6194039bce9e6c444b7ef710d243e80bea  1247d31b3758f45fcd6d6e8affa0f458996119313f33f987d946e91df7f2b316 2025-09-01 18:16:31.968  baa9e959472c025cca2f6e55f43f46dd92b66a523a30dfee7333cb779cc4a674             block_resize 2025-09-01 18:16:30.663 2025-09-01 18:16:30.663  /canvas/2c1bf6d3-9127-41b4-a211-047b190c9d0e                 unset  /canvas/2c1bf6d3-9127-41b4-a211-047b190c9d0e                True                   18.4                                 None  01990635-0134-7d9c-bff9-65859975a343                                  None             app.zerve.ai                 -480.0             web  app.zerve.ai    Asia/Manila  jp2c9nezt8fnq9m2  1.756751e+09                         www.zerve.ai  Mac OS X                                            True                   session_id_changed     Safari on Mac OS                                          125.0                               0.0                1741.0         https://www.zerve.ai/                                 4829448.0                                      62953.0              1920.0                            trigger_disabled           Desktop         https://www.zerve.ai/                            en  01990414-a8e6-7d8b-ba17-4c793d78178d                 active                   1.756746e+12  https://app.zerve.ai/canvas/2c1bf6d3-9127-41b4-a211-047b190c9d0e  395cb81ce8c15979c62d3cec4f1ddf6194039bce9e6c444b7ef710d243e80bea  https://app.zerve.ai/canvas/2c1bf6d3-9127-41b4-a211-047b190c9d0e         None                  900.0           www.zerve.ai                                   None                          trigger_disabled                                  trigger_disabled  01990635-0134-7d9c-bff9-6586e3edc9d0           1.255.1  e0cf4816-7464-4c3a-8ab4-3327945d90b6                  en-US          10.15.7                                  NaN               1080.0                       NaT                                        None        Safari 2025-09-01 18:16:31.678              Philippines                       PH                                                                              True                                                                          True  /canvas/2c1bf6d3-9127-41b4-a211-047b190c9d0e                        18.4      Mac OS X          Safari on Mac OS                     1741.0         https://www.zerve.ai/                   1920.0                Desktop  https://app.zerve.ai/canvas/2c1bf6d3-9127-41b4-a211-047b190c9d0e                       900.0                www.zerve.ai               10.15.7                    1080.0             Safari                   Philippines                            PH  /canvas/2c1bf6d3-9127-41b4-a211-047b190c9d0e                                     18.4                   Mac OS X                       Safari on Mac OS                                  1741.0            https://www.zerve.ai/                                1920.0                             Desktop  https://app.zerve.ai/canvas/2c1bf6d3-9127-41b4-a211-047b190c9d0e                                    900.0                             www.zerve.ai                            10.15.7                                 1080.0                          Safari                                Philippines                                         PH                 None                                  None                 None                                  None           None               None  2025-09-01 16:56:01.072         None              None
+      ok (7.47s, namespace=85 names)
+[ 15/67] RUN   Statistical Summaries
+================================================================================
+STATISTICAL SUMMARIES - NUMERICAL COLUMNS
+================================================================================
+
+Total numerical columns: 24
+
+Key Statistics:
+
+                                                count          mean           std           min           q25        median           q75           max
+Unnamed: 0                                     409287  2.058883e+05  1.183281e+05  0.000000e+00  1.035585e+05  2.059330e+05  3.083455e+05  4.107300e+05
+prop_$browser_version                           83788  1.333364e+02  2.826765e+01  1.560000e+01  1.390000e+02  1.400000e+02  1.420000e+02  1.460000e+02
+prop_$timezone_offset                           83915 -1.228779e+02  2.330021e+02 -7.800000e+02 -3.300000e+02 -1.200000e+02 -6.000000e+01  6.000000e+02
+prop_$time                                      83915  1.760903e+09  2.768045e+06  1.756685e+09  1.758232e+09  1.759987e+09  1.763534e+09  1.765238e+09
+prop_$sdk_debug_replay_internal_buffer_length   83634  1.268911e+01  1.963631e+01  0.000000e+00  0.000000e+00  8.000000e+00  1.600000e+01  1.091000e+03
+prop_$sdk_debug_retry_queue_size                83915  2.478580e-01  6.999315e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  6.470000e+02
+prop_$viewport_width                            83915  1.619614e+03  4.278369e+02  0.000000e+00  1.470000e+03  1.530000e+03  1.912000e+03  6.826000e+03
+prop_$sdk_debug_current_session_duration        59394  2.848411e+06  7.351960e+06 -1.889688e+06  7.541875e+04  7.067220e+05  2.949127e+06  7.782846e+07
+prop_$sdk_debug_replay_internal_buffer_size     83634  3.835586e+04  1.399003e+05  0.000000e+00  0.000000e+00  2.046500e+03  7.806000e+03  6.354497e+06
+prop_$screen_width                              83915  1.739108e+03  5.630697e+02  0.000000e+00  1.470000e+03  1.536000e+03  1.920000e+03  5.120000e+03
+prop_$sdk_debug_session_start                   83634  1.760889e+12  2.765021e+09  1.756685e+12  1.758214e+12  1.759943e+12  1.763519e+12  1.765238e+12
+prop_$viewport_height                           83915  8.670240e+02  1.815108e+02  0.000000e+00  7.350000e+02  8.320000e+02  9.620000e+02  2.621000e+03
+prop_$configured_session_timeout_ms             47941  1.800000e+06  0.000000e+00  1.800000e+06  1.800000e+06  1.800000e+06  1.800000e+06  1.800000e+06
+prop_$screen_height                             83915  1.034844e+03  1.977353e+02  0.000000e+00  9.560000e+02  1.024000e+03  1.080000e+03  3.360000e+03
+prop_$set.$browser_version                      79151  1.336008e+02  2.771918e+01  1.560000e+01  1.390000e+02  1.400000e+02  1.420000e+02  1.450000e+02
+prop_$set.$viewport_width                       79167  1.635596e+03  4.121394e+02  0.000000e+00  1.470000e+03  1.530000e+03  1.912000e+03  6.826000e+03
+prop_$set.$screen_width                         79167  1.755985e+03  5.477533e+02  0.000000e+00  1.470000e+03  1.680000e+03  1.920000e+03  5.120000e+03
+prop_$set.$viewport_height                      79167  8.707048e+02  1.810618e+02  0.000000e+00  7.390000e+02  8.320000e+02  9.680000e+02  2.621000e+03
+prop_$set.$screen_height                        79167  1.038860e+03  1.973163e+02  0.000000e+00  9.560000e+02  1.050000e+03  1.080000e+03  3.360000e+03
+prop_$set_once.$initial_browser_version         79151  1.336008e+02  2.771918e+01  1.560000e+01  1.390000e+02  1.400000e+02  1.420000e+02  1.450000e+02
+prop_$set_once.$initial_viewport_width          79167  1.635596e+03  4.121394e+02  0.000000e+00  1.470000e+03  1.530000e+03  1.912000e+03  6.826000e+03
+prop_$set_once.$initial_screen_width            79167  1.755985e+03  5.477533e+02  0.000000e+00  1.470000e+03  1.680000e+03  1.920000e+03  5.120000e+03
+prop_$set_once.$initial_viewport_height         79167  8.707048e+02  1.810618e+02  0.000000e+00  7.390000e+02  8.320000e+02  9.680000e+02  2.621000e+03
+prop_$set_once.$initial_screen_height           79167  1.038860e+03  1.973163e+02  0.000000e+00  9.560000e+02  1.050000e+03  1.080000e+03  3.360000e+03
+      FAIL (0.41s): TypeError: numpy string dtypes are not allowed, use 'str' or 'object' instead
+[ 16/67] RUN   User Activity Analysis
+================================================================================
+USER ACTIVITY DISTRIBUTION
+================================================================================
+
+Total unique users: 5,410
+Total events: 409,287
+
+Activity Statistics:
+  - Mean events per user: 75.65
+  - Median events per user: 2
+  - Std dev: 815.73
+  - Min events: 1
+  - Max events: 35771
+  - 25th percentile: 1
+  - 75th percentile: 8
+  - 95th percentile: 254
+
+Activity Level Breakdown:
+  - Single event users            :  2,209 users (40.83%)
+  - Low activity (2-5 events)     :  1,486 users (27.47%)
+  - Medium activity (6-10 events) :    579 users (10.70%)
+  - High activity (11-50 events)  :    482 users ( 8.91%)
+  - Very high activity (51-100 events):    130 users ( 2.40%)
+  - Power users (100+ events)     :    524 users ( 9.69%)
+      ok (43.71s, namespace=94 names)
+[ 17/67] RUN   Temporal Patterns
+================================================================================
+TEMPORAL PATTERNS ANALYSIS
+================================================================================
+
+1. HOURLY PATTERNS:
+   Peak hour: 15:00 with 29,902 events
+   Lowest hour: 0:00 with 7,512 events
+
+2. DAY OF WEEK PATTERNS:
+   Peak day: Thursday with 73,054 events
+   Lowest day: Sunday with 46,885 events
+
+   Day-by-day breakdown:
+     Monday    :  66,773 events
+     Tuesday   :  61,527 events
+     Wednesday :  62,408 events
+     Thursday  :  73,054 events
+     Friday    :  49,312 events
+     Saturday  :  49,328 events
+     Sunday    :  46,885 events
+
+3. WEEKLY PATTERNS:
+   Total weeks in data: 13
+   Peak week: Week 46 with 61,535 events
+   Average events per week: 31,484
+
+4. MONTHLY PATTERNS:
+   Months covered: Sep, Oct, Nov, Dec
+     Sep:  67,267 events
+     Oct:  54,906 events
+     Nov: 227,965 events
+     Dec:  59,149 events
+      ok (3.06s, namespace=102 names)
+[ 18/67] RUN   User Type & Anomaly Detection
+================================================================================
+USER TYPE ANALYSIS - FREE VS UPGRADED
+================================================================================
+
+Upgrade-related events found: 0
+
+Users with credit usage data: 38
+
+Users with tool usage: 649
+  - Mean tool usage: 151.86
+  - Median tool usage: 77
+
+**User Type Breakdown:**
+  - Potential Paid Users: 642 (11.9%)
+  - Potential Free Users: 4,768 (88.1%)
+
+**Activity Comparison:**
+  - Avg events per paid user: 544.34
+  - Avg events per free user: 12.55
+  - Ratio (paid/free): 43.39x
+
+================================================================================
+DUPLICATE & ANOMALY DETECTION
+================================================================================
+
+1. DUPLICATE ROWS:
+   Total duplicate rows: 0 (0.00%)
+
+2. DUPLICATE EVENTS (same user, event, timestamp):
+   Duplicate events: 290 (0.07%)
+
+3. DUPLICATE UUIDs:
+   Duplicate UUIDs: 0
+
+4. ACTIVITY ANOMALIES:
+   99th percentile threshold: 887 events
+   Users exceeding 99th percentile: 55
+   Total events from anomalous users: 239,426 (58.5%)
+
+   Top 10 most active users:
+      1. 520ba2129fc4cd43... : 35,771 events
+      2. f8df34503cdd50e8... : 34,813 events
+      3. ebc92ef75d7d611a... : 17,395 events
+      4. 004e82f7910898cc... : 12,513 events
+      5. d54dd295434472a9... :  8,628 events
+      6. 3556400940f8e6b9... :  7,387 events
+      7. 59d1b6ec8bf222a9... :  7,267 events
+      8. 4ec2744b68dc655d... :  6,533 events
+      9. fe7f6adec0a94976... :  6,172 events
+     10. 64d0b5e1067ccd09... :  6,116 events
+
+5. TIMESTAMP ANOMALIES:
+   Events with identical consecutive timestamps: 23,263
+      ok (15.12s, namespace=120 names)
+[ 19/67] RUN   Additional Exploratory Visualizations
+================================================================================
+ADDITIONAL EXPLORATORY INSIGHTS
+================================================================================
+
+1. GEOGRAPHIC DISTRIBUTION:
+   Total countries: 99
+
+   Top 15 countries by events:
+     India                         :  27,770 events ( 6.78%)
+     The Netherlands               :  14,210 events ( 3.47%)
+     United States                 :   9,501 events ( 2.32%)
+     Ireland                       :   8,747 events ( 2.14%)
+     France                        :   6,983 events ( 1.71%)
+     United Kingdom                :   3,740 events ( 0.91%)
+     Canada                        :   1,826 events ( 0.45%)
+     Japan                         :   1,613 events ( 0.39%)
+     Germany                       :   1,463 events ( 0.36%)
+     Ukraine                       :   1,128 events ( 0.28%)
+     Australia                     :     730 events ( 0.18%)
+     Spain                         :     678 events ( 0.17%)
+     Poland                        :     557 events ( 0.14%)
+     Kenya                         :     293 events ( 0.07%)
+     Israel                        :     285 events ( 0.07%)
+
+2. BROWSER DISTRIBUTION:
+     Chrome              :  55,562 events (13.58%)
+     Microsoft Edge      :  21,757 events ( 5.32%)
+     Safari              :   4,314 events ( 1.05%)
+     Firefox             :   1,124 events ( 0.27%)
+     Mobile Safari       :     662 events ( 0.16%)
+     Chrome iOS          :     244 events ( 0.06%)
+     Opera               :     146 events ( 0.04%)
+     Samsung Internet    :     104 events ( 0.03%)
+     Firefox iOS         :       2 events ( 0.00%)
+
+3. OPERATING SYSTEM DISTRIBUTION:
+     Linux               : 326,368 events (79.74%)
+     Mac OS X            :  42,555 events (10.40%)
+     Windows             :  37,328 events ( 9.12%)
+     Android             :   2,011 events ( 0.49%)
+     iOS                 :     904 events ( 0.22%)
+     Chrome OS           :     121 events ( 0.03%)
+
+4. DEVICE TYPE DISTRIBUTION:
+     Desktop             :  80,996 events (19.79%)
+     Mobile              :   2,784 events ( 0.68%)
+     Tablet              :     135 events ( 0.03%)
+
+================================================================================
+      FAIL (15.01s): UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 0: character maps to <undefined>
+[ 20/67] RUN   Event Taxonomy & Categorization
+================================================================================
+EVENT TAXONOMY - CATEGORIZING 141 EVENTS
+================================================================================
+
+Total unique events: 141
+Total event occurrences: 409,287
+
+
+================================================================================
+EVENT CATEGORIES - SUMMARY
+================================================================================
+
+Total categories: 22
+
+               Category  Event Count  Total Occurrences  Percentage
+      Credits & Billing            1             160062   39.107521
+     AI Agent - General           29             110325   26.955413
+                Editing           11              53183   12.994060
+  Other / Miscellaneous           26              38252    9.346009
+       Block Operations           15              15217    3.717929
+     AI Agent - Workers            1              10325    2.522680
+      User Interactions            5               3580    0.874692
+      Canvas Operations           16               3434    0.839020
+               Creation            7               2973    0.726385
+          Block Editing            1               2356    0.575635
+   Viewing & Inspection            2               2245    0.548515
+         Block Creation            1               1998    0.488166
+        File Management            6               1650    0.403140
+        Block Execution            1               1154    0.281954
+ AI Agent - Suggestions            1                857    0.209389
+               Deletion            6                715    0.174694
+Onboarding & Activation            2                492    0.120209
+        Data Operations            1                229    0.055951
+Collaboration & Sharing            3                114    0.027853
+             Deployment            4                 75    0.018325
+       Data Connections            1                 48    0.011728
+           User Actions            1                  3    0.000733
+
+================================================================================
+RARE BUT IMPORTANT EVENTS (< 1%, threshold: 4,093 occurrences)
+================================================================================
+
+Total rare events: 124
+Rare events represent 13.60% of all events
+
+                            Event               Category  Count  Percentage Importance
+                   agent_new_chat     AI Agent - General   3396    0.829736     MEDIUM
+                  credits_below_1                Editing   3344    0.817031       HIGH
+                  credits_below_2                Editing   3277    0.800661       HIGH
+                     link_clicked      User Interactions   3212    0.784779     MEDIUM
+             skip_onboarding_form  Other / Miscellaneous   2800    0.684117     MEDIUM
+          agent_start_from_prompt     AI Agent - General   2473    0.604221     MEDIUM
+                    agent_message     AI Agent - General   2466    0.602511     MEDIUM
+                     block_resize          Block Editing   2356    0.575635     MEDIUM
+                     block_create         Block Creation   1998    0.488166     MEDIUM
+                          sign_up  Other / Miscellaneous   1930    0.471552     MEDIUM
+                     block_delete       Block Operations   1804    0.440767     MEDIUM
+        fullscreen_preview_output   Viewing & Inspection   1667    0.407294     MEDIUM
+           submit_onboarding_form  Other / Miscellaneous   1546    0.377730     MEDIUM
+              agent_block_created     AI Agent - General   1528    0.373332     MEDIUM
+agent_tool_call_delete_block_tool     AI Agent - General   1524    0.372355     MEDIUM
+                 new_user_created               Creation   1390    0.339615     MEDIUM
+                      canvas_open      Canvas Operations   1357    0.331552     MEDIUM
+                      edge_create               Creation   1280    0.312739     MEDIUM
+                   run_all_blocks        Block Execution   1154    0.281954     MEDIUM
+          agent_accept_suggestion AI Agent - Suggestions    857    0.209389     MEDIUM
+                       agent_open     AI Agent - General    856    0.209144     MEDIUM
+                    canvas_create      Canvas Operations    706    0.172495     MEDIUM
+                     files_upload        File Management    631    0.154171     MEDIUM
+         fullscreen_preview_input   Viewing & Inspection    578    0.141221     MEDIUM
+                   files_download        File Management    556    0.135846     MEDIUM
+                      edge_delete               Deletion    547    0.133647     MEDIUM
+                     block_rename       Block Operations    476    0.116300     MEDIUM
+                 agent_suprise_me     AI Agent - General    397    0.096998     MEDIUM
+                       stop_block       Block Operations    375    0.091623     MEDIUM
+                   run_upto_block       Block Operations    348    0.085026     MEDIUM
+
+================================================================================
+      FAIL (0.04s): UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 0: character maps to <undefined>
+[ 21/67] RUN   Engagement Segmentation
+Engagement metrics calculated for 5410 users
+
+Engagement Metrics Summary:
+       total_events  active_days  ...  session_count  avg_events_per_session
+count   5410.000000  5410.000000  ...    5410.000000             5410.000000
+mean      75.653789     1.530499  ...       2.332717               21.018553
+std      815.726550     3.666931  ...      16.423974               71.381786
+min        1.000000     1.000000  ...       1.000000                1.000000
+25%        1.000000     1.000000  ...       1.000000                1.000000
+50%        2.000000     1.000000  ...       1.000000                2.000000
+75%        8.000000     1.000000  ...       1.000000                6.000000
+max    35771.000000    71.000000  ...     905.000000             1289.370370
+
+[8 rows x 5 columns]
+
+Cluster Profiles (Mean Values):
+         total_events  unique_event_types  ...  active_days  avg_events_per_session
+cluster                                    ...                                     
+0                3.99                2.25  ...         1.14                    3.17
+1             6441.62               52.19  ...        55.12                   37.18
+2              692.39               23.20  ...         1.65                  355.36
+3            35292.00               40.00  ...        43.00                 1009.70
+4              180.18               18.91  ...         2.84                   68.94
+
+[5 rows x 5 columns]
+
+Engagement Segment Distribution:
+segment_label
+Churned        5392
+Power Users      18
+Name: count, dtype: int64
+
+Segment Characteristics:
+               total_events  ...  avg_events_per_session
+segment_label                ...                        
+Churned               43.70  ...                   20.60
+Power Users         9647.22  ...                  145.24
+
+[2 rows x 5 columns]
+      ok (7.18s, namespace=168 names)
+[ 22/67] RUN   Temporal & Monetization Segmentation
+Temporal & Monetization segmentation completed for 5410 users
+
+Adoption Timing Distribution:
+adoption_timing
+Mid Adopter      2704
+Late Adopter     1353
+Early Adopter    1353
+Name: count, dtype: int64
+
+Activity Pattern Distribution:
+activity_pattern
+Weekday User     4086
+Weekend User     1229
+Balanced User      95
+Name: count, dtype: int64
+
+Consistency Distribution:
+consistency_label
+Bursty        4637
+Consistent     754
+Moderate        19
+Name: count, dtype: int64
+
+Monetization Segment Distribution:
+monetization_segment
+Free User      4601
+Credit User     809
+Name: count, dtype: int64
+
+Temporal Metrics Summary:
+       days_since_first  days_active_span  weekend_ratio  consistency_score
+count       5410.000000       5410.000000    5410.000000         773.000000
+mean          36.366728          2.987431       0.231389           0.805449
+std           32.746426         10.446344       0.413365           0.578974
+min            0.000000          1.000000       0.000000           0.000000
+25%            7.000000          1.000000       0.000000           0.282843
+50%           25.000000          1.000000       0.000000           0.761500
+75%           66.000000          1.000000       0.108333           1.286720
+max           98.000000         99.000000       1.000000           3.735732
+      ok (0.92s, namespace=180 names)
+[ 23/67] RUN   Session Pattern Analysis
+================================================================================
+SESSION PATTERN ANALYSIS
+================================================================================
+      FAIL (1.67s): MemoryError: Unable to allocate 240. MiB for an array with shape (77, 409287) and data type object
+[ 24/67] RUN   Engagement Momentum Tracking
+======================================================================
+ENGAGEMENT MOMENTUM TRACKING
+======================================================================
+
+Total Users Analyzed: 5,410
+
+Momentum Trend Distribution:
+momentum_trend
+Insufficient_Data    4637
+Accelerating          596
+Decelerating          142
+Stable                 35
+
+Churn Risk Analysis:
+  - Users at churn risk:  30 (0.6%)
+  - Users not at risk:    5,380
+
+Average Metrics by Momentum Trend:
+                   total_events  current_7d_activity  current_30d_activity  churn_risk
+momentum_trend                                                                        
+Accelerating             256.75               147.95                195.32           8
+Decelerating            1089.42               136.75                756.73          22
+Insufficient_Data         21.60                21.60                 21.60           0
+Stable                    39.74                 8.60                 35.40           0
+
+Engagement Velocity Patterns:
+  - Mean acceleration periods: 0.4
+  - Mean deceleration periods: 0.1
+      FAIL (12.02s): UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+[ 25/67] RUN   Feature Adoption Trajectories
+================================================================================
+FEATURE ADOPTION TRAJECTORY ANALYSIS
+================================================================================
+      FAIL (0.05s): UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+[ 26/67] RUN   Lifecycle Stage Definition
+======================================================================
+LIFECYCLE STAGE ANALYSIS
+======================================================================
+
+Total Users Analyzed: 409,287
+Total Events: 409,287
+
+Stage Transition Success Rates:
+      FAIL (27.42s): UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 15: character maps to <undefined>
+[ 27/67] RUN   Primary Success Metrics
+================================================================================
+PRIMARY SUCCESS METRICS CALCULATION
+================================================================================
+      FAIL (0.41s): UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ca' in position 2: character maps to <undefined>
+[ 28/67] RUN   date_range_and_temporal_coverage
+================================================================================
+TEMPORAL COVERAGE ANALYSIS
+================================================================================
+
+Timestamp Columns Found: 6
+  - created_at
+  - timestamp
+  - _inserted_at
+  - prop_$initialization_time
+  - prop_$sent_at
+  - prop_$last_posthog_reset
+
+--------------------------------------------------------------------------------
+PRIMARY TIMESTAMP: timestamp
+--------------------------------------------------------------------------------
+Earliest Event: 2025-09-01 00:03:11.704000
+Latest Event:   2025-12-08 23:59:57.379000
+Date Range:     98 days (3.2 months)
+
+--------------------------------------------------------------------------------
+TEMPORAL DISTRIBUTION
+--------------------------------------------------------------------------------
+
+Events by Month:
+  2025-09: 67,267 events (16.4%)
+  2025-10: 54,906 events (13.4%)
+  2025-11: 227,965 events (55.7%)
+  2025-12: 59,149 events (14.5%)
+
+Events by Day of Week:
+  Monday    : 66,773 events (16.3%)
+  Tuesday   : 61,527 events (15.0%)
+  Wednesday : 62,408 events (15.2%)
+  Thursday  : 73,054 events (17.8%)
+  Friday    : 49,312 events (12.0%)
+  Saturday  : 49,328 events (12.1%)
+  Sunday    : 46,885 events (11.5%)
+
+Missing Timestamps: 0 (0.00%)
+      ok (1.37s, namespace=220 names)
+[ 29/67] RUN   data_quality_checks
+================================================================================
+DATA QUALITY ASSESSMENT
+================================================================================
+
+--------------------------------------------------------------------------------
+MISSING DATA ANALYSIS
+--------------------------------------------------------------------------------
+
+Columns with Missing Data: 96 out of 107 total columns
+Total Missing Values: 29,656,726
+
+Top 15 Columns with Most Missing Data:
+                                                                                   missing_count  missing_pct
+prop_credits_used                                                                         387874        94.77
+prop_user_id                                                                              386484        94.43
+prop_$session_recording_start_reason                                                      363247        88.75
+prop_$initialization_time                                                                 362414        88.55
+prop_$dead_clicks_enabled_server_side                                                     362160        88.49
+prop_$autocapture_disabled_server_side                                                    361449        88.31
+prop_$web_vitals_enabled_server_side                                                      361449        88.31
+prop_$exception_capture_enabled_server_side                                               361449        88.31
+prop_$configured_session_timeout_ms                                                       361346        88.29
+prop_surface                                                                              361346        88.29
+prop_$sdk_debug_current_session_duration                                                  349893        85.49
+prop_$last_posthog_reset                                                                  346808        84.73
+prop_$console_log_recording_enabled_server_side                                           335469        81.96
+prop_$session_recording_network_payload_capture.capturePerformance.web_vitals             335469        81.96
+prop_$session_recording_network_payload_capture.capturePerformance.network_timing         335469        81.96
+      FAIL (1.18s): UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+[ 30/67] RUN   Workflow Stage Mapping
+================================================================================
+WORKFLOW STAGE MAPPING - User Journey Framework
+================================================================================
+
+Total workflow stages: 10
+
+     Workflow Stage                                                        Description  Event Count  Total Occurrences  Percentage
+       Monetization                       Credit consumption, billing events, upgrades            3             166683   40.725212
+      AI Assistance     Using AI for code generation, suggestions, and problem solving           31             121507   29.687481
+        Exploration  First canvas creation, exploring interface, trying basic features           76              53269   13.015073
+Editing & Iteration         Modifying code, refining workflows, iterating on solutions           10              48918   11.952004
+          Execution            Running blocks, executing workflows, generating outputs            2              11504    2.810742
+         Onboarding Initial activation, learning platform basics, completing tutorials            3               3292    0.804326
+           Creation           Creating first blocks, writing code, setting up canvases            1               1998    0.488166
+    Data Operations          Connecting to data sources, loading data, running queries            8               1927    0.470819
+      Collaboration            Sharing work, collaborating with team members, comments            3                114    0.027853
+         Deployment         Deploying models, creating APIs, productionizing workflows            4                 75    0.018325
+
+================================================================================
+TYPICAL USER PROGRESSION PATH
+================================================================================
+
+Stages ordered by typical user journey:
+
+ 1. Onboarding                     |   3 events |    3,292 occurrences ( 0.80%)
+ 2. Exploration                    |  76 events |   53,269 occurrences (13.02%)
+ 3. Creation                       |   1 events |    1,998 occurrences ( 0.49%)
+ 4. Editing & Iteration            |  10 events |   48,918 occurrences (11.95%)
+ 5. Execution                      |   2 events |   11,504 occurrences ( 2.81%)
+ 6. AI Assistance                  |  31 events |  121,507 occurrences (29.69%)
+ 7. Data Operations                |   8 events |    1,927 occurrences ( 0.47%)
+ 9. Collaboration                  |   3 events |      114 occurrences ( 0.03%)
+11. Deployment                     |   4 events |       75 occurrences ( 0.02%)
+
+================================================================================
+      FAIL (0.04s): UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 0: character maps to <undefined>
+[ 31/67] RUN   Feature Adoption Evolution
+======================================================================
+FEATURE ADOPTION EVOLUTION
+======================================================================
+
+Total Users Analyzed: 5,410
+Unique Feature Categories: 22
+
+Average Feature Adoption Metrics:
+  - Mean features used per user:    2.49
+  - Median features used per user:  1
+  - Mean weekly feature diversity:  2.33
+
+Top Gateway Features (Highest Engagement Lift):
+                feature  users_count  engagement_lift
+             Deployment           11        12.266076
+       Data Connections           23         9.336164
+               Deletion           86         9.324887
+   Viewing & Inspection           87         9.190393
+Collaboration & Sharing           32         9.036061
+          Block Editing          258         7.597095
+        File Management          232         7.530775
+         Block Creation          243         7.388962
+        Block Execution          357         7.019060
+       Block Operations          553         6.762027
+
+Most Common Feature Adoption Sequences:
+      FAIL (3.59s): UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 22: character maps to <undefined>
+[ 32/67] RUN   Comprehensive Feature Engineering
+================================================================================
+COMPREHENSIVE FEATURE ENGINEERING FOR ML
+================================================================================
+      FAIL (82.74s): UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ca' in position 2: character maps to <undefined>
+[ 33/67] RUN   Workflow Sequence Patterns
+================================================================================
+WORKFLOW SEQUENCE PATTERN EXTRACTION
+================================================================================
+      FAIL (0.01s): NameError: name 'df_sessions' is not defined
+[ 34/67] RUN   Growth Trajectory Classification
+======================================================================
+GROWTH TRAJECTORY CLASSIFICATION
+======================================================================
+
+Total Users Classified: 1,000
+
+Trajectory Distribution:
+trajectory_type
+Insufficient_Data    1000
+
+Average Engagement by Trajectory Type:
+                  total_events        total_days       
+                          mean median       mean median
+trajectory_type                                        
+Insufficient_Data          1.0    1.0        0.0    0.0
+      ok (42.96s, namespace=274 names)
+[ 35/67] RUN   Composite Success Score & Labeling
+================================================================================
+COMPOSITE SUCCESS SCORE CALCULATION
+================================================================================
+      FAIL (0.00s): UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ca' in position 2: character maps to <undefined>
+[ 36/67] SKIP  key_findings_summary  (type=4 (non-code))
+[ 37/67] RUN   Hierarchical Event Visualization
+================================================================================
+CREATING HIERARCHICAL VISUALIZATIONS
+================================================================================
+      FAIL (10.80s): UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>

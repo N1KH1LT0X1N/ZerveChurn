@@ -1,0 +1,91 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# ZerveChurn — .gitignore
+#
+# NOTE: data + model artefacts (*.parquet, *.csv, *.pkl) are intentionally
+# tracked in this repo because they are needed to reproduce / audit the
+# pipeline locally. The ensemble bundle (`ensemble_models.pkl`, ~6 MB) and
+# the raw event log (`user_retention.parquet`, ~50 MB) are committed at the
+# repo root. If you ever want to stop tracking them, uncomment the patterns
+# at the bottom of this file.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Python bytecode / build artefacts ────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# ── Virtual environments ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ── Notebook scratch ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Editor / IDE configs ─────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── OS / desktop junk ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Anaconda / Zerve workspace artefacts ─────────────────────────────────────
+anaconda_projects/db/
+.anaconda/
+
+# ── Local-replay checkpoint state (very large: ~16 GB of pickled namespaces) ─
+outputs/_state/
+outputs/_state/**
+
+# ── Log / error captures from local canvas runs ──────────────────────────────
+# (the existing _run_*.log / _run_*.err files in outputs/ ARE tracked as
+#  evidence per docs/repo_state_and_next_steps.md §1.4 — we only ignore
+#  *future* large dumps that haven't been audited.)
+outputs/*.tmp
+outputs/*.bak
+
+# ── Empty per-block matplotlib output folders ────────────────────────────────
+# (kept on disk for the local runner to write into; only their content is
+#  tracked when present.)
+
+# ── Secrets / credentials ────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+aws_credentials*
+.aws/
+
+# ── Misc temp ───────────────────────────────────────────────────────────────
+*.tmp
+*.bak
+*.log.lock
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Optional — uncomment to stop tracking heavy data / model artefacts.
+# ─────────────────────────────────────────────────────────────────────────────
+# user_retention.parquet
+# *.parquet
+# user_segments.csv
+# user_intelligence_export.csv
+# ensemble_models.pkl
+# *.pkl
