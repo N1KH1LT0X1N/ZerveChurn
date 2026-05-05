@@ -1,0 +1,15 @@
+[client]
+maxMessageSize = 400
+
+[logger]
+level = "info"
+
+[theme]
+primaryColor = "#7c6af7"
+backgroundColor = "#0f0f11"
+secondaryBackgroundColor = "#16161a"
+textColor = "#f0f0f5"
+font = "sans serif"
+
+[server]
+maxUploadSize=400
