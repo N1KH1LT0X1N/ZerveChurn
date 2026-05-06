@@ -16,6 +16,7 @@
 - [Pipeline stages](#pipeline-stages)
 - [Data & model artifacts](#data--model-artifacts)
 - [Generated reports](#generated-reports)
+- [Frontend web application](#frontend-web-application)
 - [Local tooling (`scripts/`)](#local-tooling-scripts)
 - [Reproducing / running locally](#reproducing--running-locally)
 - [Key findings](#key-findings)
@@ -30,9 +31,10 @@ This is a **read-only export** of a Zerve project called *ZerveXHackerEarth (Clo
 
 1. **`canvas.yaml`** — declarative canvas graph (blocks + edges + layout). Source of truth for the visual DAG in Zerve.
 2. **`Development/`** — one file per canvas block, exported as `.py` / `.md` / `.text`. This is where the actual analysis code lives.
-3. **Data & model artifacts** — `user_retention.parquet` (raw events), `user_segments.csv`, `user_intelligence_export.csv`, `ensemble_models.pkl` (trained model bundle).
-4. **Generated reports** — timestamped markdown files (`user_behavior_analytics_report_*.md`, `social_media_posts_*.md`, `weekly_insights_report.md`) produced by the "Export Report", "Social Media Post Drafts", and "Weekly Insights Executive Briefing" blocks.
-5. **Local tooling** — `scripts/render_canvas_dag.py` (Mermaid DAG generator) + its output `canvas_dag.md`.
+3. **`Frontend/`** — Streamlit-based interactive web application for real-time churn prediction and exploratory data analysis.
+4. **Data & model artifacts** — `user_retention.parquet` (raw events), `user_segments.csv`, `user_intelligence_export.csv`, `ensemble_models.pkl` (trained model bundle).
+5. **Generated reports** — timestamped markdown files (`user_behavior_analytics_report_*.md`, `social_media_posts_*.md`, `weekly_insights_report.md`) produced by the "Export Report", "Social Media Post Drafts", and "Weekly Insights Executive Briefing" blocks.
+6. **Local tooling** — `scripts/render_canvas_dag.py` (Mermaid DAG generator) + its output `canvas_dag.md`.
 
 ---
 
@@ -59,6 +61,11 @@ ZerveChurn/
 │   ├── Weekly Insights Executive Briefing.text       # LLM prompt block
 │   ├── Project README.md                             # Zerve-side project overview
 │   └── Quality Assurance Checklist.md
+│
+├── Frontend/                                         # Streamlit web application
+│   ├── streamlit_webapp.py                           # interactive churn predictor & EDA app
+│   └── .streamlit/
+│       └── config.toml                               # Streamlit configuration
 │
 ├── scripts/                                          # local tooling — see "Local tooling" below
 │   ├── render_canvas_dag.py
@@ -170,6 +177,64 @@ Reports are regenerated on each block run; the timestamp suffix prevents overwri
 
 ---
 
+## Frontend web application
+
+A **Streamlit-based interactive web application** is available in `Frontend/streamlit_webapp.py` for real-time churn prediction and exploratory data analysis.
+
+### Features
+
+**Tab 1: Churn Predictor**
+- Upload `ensemble_models.pkl` to load the trained model ensemble
+- Select from 6 models: Random Forest, Gradient Boosting, AdaBoost, Logistic Regression, Voting Ensemble, Stacking Ensemble
+- Enter user behavioral metrics (total events, tenure, days since first/last activity)
+- Real-time churn risk scoring with:
+  - Churn score (0-100) with visual gauge
+  - Churn window prediction (30/60/90 days or beyond)
+  - Risk tier classification (Low/Moderate/High)
+  - Retention score
+  - Model used display
+- Actionable recommendations based on risk level
+
+**Tab 2: EDA & Insights**
+- Upload `user_retention.csv` to unlock full analysis
+- Six comprehensive analysis sections:
+  1. **Dataset Overview** - Row/column counts, unique users/events, memory usage, data types, missing values, top events, activity over time
+  2. **Behavioral Metrics** - Browser/OS/country distributions, device & geography breakdowns
+  3. **Success Scoring** - Composite success scores, labels, cohort heatmaps
+  4. **Survival Curves** - Kaplan-Meier curves by risk segment, engagement level, and deployment status with median survival times
+  5. **Cohort & Tenure Analysis** - User count & churn rate by tenure bucket, average lifetime events, days inactive vs events scatter
+  6. **User Profile Explorer** - Browse full user-level summary table with all computed metrics
+
+### Running the webapp
+
+```powershell
+# Install dependencies
+pip install streamlit pandas numpy plotly
+
+# Navigate to Frontend directory
+cd Frontend
+
+# Run the Streamlit app
+streamlit run streamlit_webapp.py
+```
+
+The webapp uses a dark theme with the Zerve color palette and includes:
+- Custom CSS styling for a modern, professional UI
+- Interactive Plotly charts with hover tooltips
+- Responsive layout that works on desktop and tablet
+- Cached model loading and EDA pipeline for performance
+- File upload handling for both model pickle and CSV datasets
+
+### Configuration
+
+Streamlit settings are in `Frontend/.streamlit/config.toml`:
+- Primary color: `#7c6af7` (Zerve purple)
+- Background: `#0f0f11` (dark)
+- Max upload size: 400 MB
+- Logger level: info
+
+---
+
 ## Local tooling (`scripts/`)
 
 ### `scripts/render_canvas_dag.py`
@@ -278,6 +343,23 @@ This repo is primarily an **archive of a Zerve execution**. To re-run a block lo
    …
    ```
 5. Blocks share state through module-level variables in the Zerve runtime. When running outside Zerve you may need to concatenate or adapt them — treat each `.py` as a cell, not a standalone script.
+
+### Running the Streamlit webapp
+
+For interactive churn prediction and EDA:
+
+```powershell
+# Install webapp dependencies
+pip install streamlit pandas numpy plotly
+
+# Navigate to Frontend directory
+cd Frontend
+
+# Run the Streamlit app
+streamlit run streamlit_webapp.py
+```
+
+The webapp will open in your browser at `http://localhost:8501`. Upload `ensemble_models.pkl` from the repo root to enable predictions, or upload `user_retention.csv` (converted from `user_retention.parquet`) to unlock the full EDA & Insights tab.
 
 ---
 
