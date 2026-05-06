@@ -409,6 +409,10 @@ Data / model interpretation caveats (full analysis in `docs/pipeline_deep_dive.m
 
 - **`docs/pipeline_deep_dive.md`** — **start here** for a stage-by-stage reading of every block, cross-cutting findings, model-validity assessment, and the full list of data-integrity issues with file:line references. The material above is a digest of this document.
 - **`docs/zerve_platform_report.md`** — everything about the Zerve platform itself (canvas/notebook duality, DAG execution semantics, S3-cache state machine, block types, Lambda/Fargate/GPU compute, Fleets, layer types, Git integration, AWS self-hosting). Read this if you need to understand *why* the codebase uses patterns like shared-namespace variables and defensive `del` prologues.
+- **`docs/repo_state_and_next_steps.md`** — reviewer-grade audit of what currently exists, what runs end-to-end, what does not, and the smallest set of changes needed for clean local execution.
+- **`docs/viva_presentation_guide.md`** — comprehensive viva/presentation guide with project overview, technical architecture, key models, findings, limitations, open issues, future work, presentation structure, and common Q&A.
+- **`report.md`** — complete user behavior analytics & churn prediction report with detailed pipeline documentation, model validity assessment, and business insights.
+- **`Final-Report.pdf`** — final project report document (PDF version).
 - **`canvas_dag.md`** — Mermaid rendering of the 67-block / 78-edge DAG grouped by stage.
 - **`Development/Project README.md`** and **`Development/Quality Assurance Checklist.md`** — the Zerve-side authored overview and QA notes (pre-date the issues documented above).
 
